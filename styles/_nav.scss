@@ -1,0 +1,139 @@
+//BEGIN NAV BAR
+
+@media (min-width: 35em) {
+  .humberger {
+    display: none;
+  }
+  .logo {
+    border-radius: 1.5rem;
+  }
+  nav {
+    box-shadow: 0 0 2rem rgba(9, 0, 0, 0.4);
+
+    div {
+      justify-content: center;
+
+      div {
+        display: flex;
+        gap: 7rem;
+
+        & > a {
+          color: $medium;
+          position: relative;
+          display: block;
+          padding: 1.6rem;
+          border-radius: 0.6rem;
+          text-align: center;
+          transition: 0.5s;
+          text-align: center;
+        }
+
+        & > a:hover {
+          box-shadow: 0.4rem 0.4rem 0.1rem rgba(9, 0, 0, 0.1);
+          border-right: solid 0.2rem $light;
+          border-bottom: solid 0.2rem $light;
+          border-radius: 2rem;
+          color: $dark;
+        }
+
+        .active {
+          box-shadow: 0.4rem 0.4rem 0.1rem rgba(9, 0, 0, 0.1);
+          border-right: solid 0.2rem $light;
+          border-bottom: solid 0.2rem $light;
+          color: $dark;
+          border-radius: 2rem;
+        }
+
+        & > div {
+          flex-grow: 1;
+          flex-shrink: 1;
+        }
+        & > div:nth-of-type(1) {
+          flex-basis: 2rem;
+          img {
+            height: 6rem;
+          }
+        }
+
+        & > div:nth-of-type(2) {
+          flex-basis: 50rem;
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 35em) {
+  .showname {
+    left: 0;
+  }
+
+  .hidenav {
+    left: -100%;
+  }
+
+  .humberger {
+    z-index: 6;
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    position: fixed;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    span {
+      display: block;
+      border-bottom: solid #777 0.5rem;
+    }
+  }
+  nav {
+    transition: 0.2s;
+    height: 100vh;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+
+    & > div:nth-of-type(2) {
+      background-color: rgba(9, 0, 0, 0.8);
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    & > div:nth-of-type(1) {
+      height: 100vh;
+      width: 70%;
+      background-color: white;
+      padding: 1.4em;
+      & > div:nth-of-type(1) {
+        img {
+          height: 8rem;
+        }
+      }
+
+      & > div:nth-of-type(3) {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        & > a {
+          display: block;
+          font-size: 1.6rem;
+          flex: 1rem 1 1;
+        }
+      }
+    }
+  }
+}
+
+//END NAV BAR

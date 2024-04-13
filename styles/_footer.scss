@@ -1,0 +1,119 @@
+footer {
+  padding-block: 5rem;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(to right, white,$dark);
+
+  .phone-bx {
+    background-color: $dark;
+    color: white;
+    padding: 0.5rem;
+  
+  }
+
+  .img-bx {
+    width: 100%;
+    height: 30rem;
+    position: relative;
+    padding: 1rem;
+    align-items: center;
+
+    display: flex;
+    .stack-img {
+      position: absolute;
+    }
+
+    .img-1 {
+      background-color: white;
+      width: 15rem;
+      height: 15rem;
+      border-radius: 3rem;
+      border: solid 0.7rem white;
+      transform: rotateZ(-50deg);
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+      transition: .2s;
+ 
+    }
+
+    .img-2 {
+      background-color: white;
+      width: 15rem;
+      height: 15rem;
+      border-radius: 3rem;
+      border: solid 0.7rem white;
+      transform: rotateZ(-50deg) translateX(50%) translateY(60%);
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+      transition: .5s;
+
+    }
+
+    .img-3 {
+      background-color: white;
+      width: 15rem;
+      height: 15rem;
+      border-radius: 3rem;
+      border: solid 0.7rem white;
+      transform: rotateZ(-50deg) translateX(100%) translateY(130%);
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+      transition:5s;
+
+    }
+
+    .img-4 {
+      background-color: white;
+      width: 15rem;
+      height: 15rem;
+      border-radius: 3rem;
+      border: solid 0.7rem white;
+      transform: rotateZ(-50deg) translateX(150%) translateY(200%);
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+      transition: .2s;
+
+    }
+
+    .img-5 {
+      background-color: $light;
+      color: $dark;
+      width: 50rem;
+      height: 50rem;
+      border-radius: 50%;
+      transform: translateX(170%) translateY(-10%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & > div {
+        width: 20rem;
+        height: 15rem;
+      }
+
+      .email-bx {
+        display: block;
+        font-weight: bold;
+        margin-block: 1.2rem;
+      }
+
+      .social-icons {
+        display: flex;
+        margin-bottom: 2rem;
+        justify-content: center;
+        gap: 1rem;
+        .fa {
+          width: 3rem;
+          height: 3rem;
+          display: flex;
+          font-size: 1.2rem;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          border: solid 0.1rem #666;
+        }
+      }
+    }
+  }
+
+  & > div:nth-of-type(2) {
+    color: white;
+    text-shadow: 0 0 .5rem black;
+  }
+}

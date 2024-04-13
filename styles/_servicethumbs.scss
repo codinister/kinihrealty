@@ -1,0 +1,88 @@
+.sesrchthumbswrapper {
+  position: relative;
+  z-index: 99;
+
+  .servicesthumbs {
+    background-color: $light;
+    padding-block: 3rem;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 5rem;
+    font-size: 1rem;
+
+    & > div:nth-of-type(2) {
+      flex-basis: 5rem;
+      flex-grow: 0;
+      input{
+        width: 30rem;
+      }
+    }
+
+    & > div:nth-of-type(3) {
+      flex-basis: 5rem;
+      flex-grow: 0;
+    }
+
+    .services {
+      flex-basis: 32rem;
+      flex-grow: 0;
+      display: flex;
+      gap: 1rem;
+      & > a {
+        text-align: center;
+        background-color: white;
+        border-radius: 0.5rem;
+        padding: 0.6rem;
+        display: block;
+        flex-basis: 6rem;
+        & > div {
+          height: 3rem;
+        }
+        & > h4 {
+          line-height: 0.8rem;
+          margin-top: 0.3rem;
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .hamburger {
+      img {
+        padding: 1rem;
+        background-color: white;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      &:hover > div {
+        display: block;
+      }
+
+      .categories {
+        background: white;
+        box-shadow: -1rem 1rem 2rem rgba(0, 0, 0, 0.2);
+        width: 20rem;
+        height: 30rem;
+        right: 5rem;
+        top: 7rem;
+        position: absolute;
+        border-radius: 1rem;
+        display: none;
+        overflow-y: scroll;
+        border: solid 2rem white;
+        a {
+          display: block;
+          border-bottom: 0.1rem solid #ccc;
+          padding-block: 0.4rem;
+          font-size: 1.6rem;
+          color: $dark;
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+          }
+        }
+      }
+    }
+  }
+}
