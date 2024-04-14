@@ -2,7 +2,6 @@ import { data } from '@/data/data';
 import Link from 'next/link';
 
 const Services = () => {
-  
   const unique = Object.values(
     data.reduce((a: any, b) => {
       if (a[b.type]) {
@@ -20,16 +19,15 @@ const Services = () => {
     <>
       {obj.map((v: any, k) => (
         <Link href={`/${v.type}`} key={k} className="serv-card">
-      
-            <div
-              style={{
-                backgroundImage: `url(${v.img})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-              }}
-            ></div>
-    
-          <h4>
+          <div
+            style={{
+              backgroundImage: `url(${v.img})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          ></div>
+
+          <div>
             {v.type == 'sell'
               ? 'Sell a home'
               : v.type === 'rent'
@@ -37,7 +35,7 @@ const Services = () => {
               : v.type === 'new'
               ? 'New properties'
               : 'Buy a home'}
-          </h4>
+          </div>
         </Link>
       ))}
     </>

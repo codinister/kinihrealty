@@ -19,9 +19,11 @@ const Blog = ({ posts }: DT) => {
 
   return (
     <div className="blog">
-      <h1>Our blog</h1>
+      <h2>Our blog</h2>
       <div className="underline"></div>
-      <div>{res}</div>
+      <div className="container">{res}</div>
+
+      <Link href="/">View all posts</Link>
     </div>
   );
 };

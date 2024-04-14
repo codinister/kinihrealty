@@ -5,13 +5,11 @@ import 'react-slideshow-image/dist/styles.css';
 import Searchbox from './Searchbox';
 import { DATATYPE } from '@/types/types';
 
-
-
 type DT = {
-  data: DATATYPE[]
-}
+  data: DATATYPE[];
+};
 
-const Hero = ({data}: DT) => {
+const Hero = ({ data }: DT) => {
   const images = [
     {
       url: data[0]?.img,
@@ -47,8 +45,6 @@ const Hero = ({data}: DT) => {
 
   const SLIDER_HEIGHT = 350;
 
-  
-
   return (
     <div className="slide-container">
       <div className="search-box">
@@ -58,11 +54,10 @@ const Hero = ({data}: DT) => {
       </div>
 
       <Slide
-      
+
       // autoplay={false}
       // onChange={function noRefCheck(){}}
       // onStartChange={function noRefCheck(){}}
-      
       >
         {images.map((fadeImage, index) => (
           <div

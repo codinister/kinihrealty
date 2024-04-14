@@ -9,40 +9,14 @@
   }
   nav {
     box-shadow: 0 0 2rem rgba(9, 0, 0, 0.4);
+    padding-block: 1rem;
 
     div {
       justify-content: center;
 
       div {
         display: flex;
-        gap: 7rem;
-
-        & > a {
-          color: $medium;
-          position: relative;
-          display: block;
-          padding: 1.6rem;
-          border-radius: 0.6rem;
-          text-align: center;
-          transition: 0.5s;
-          text-align: center;
-        }
-
-        & > a:hover {
-          box-shadow: 0.4rem 0.4rem 0.1rem rgba(9, 0, 0, 0.1);
-          border-right: solid 0.2rem $light;
-          border-bottom: solid 0.2rem $light;
-          border-radius: 2rem;
-          color: $dark;
-        }
-
-        .active {
-          box-shadow: 0.4rem 0.4rem 0.1rem rgba(9, 0, 0, 0.1);
-          border-right: solid 0.2rem $light;
-          border-bottom: solid 0.2rem $light;
-          color: $dark;
-          border-radius: 2rem;
-        }
+        gap: 7.2rem;
 
         & > div {
           flex-grow: 1;
@@ -59,8 +33,31 @@
           flex-basis: 50rem;
           display: flex;
           align-items: center;
-          gap: 1rem;
+          gap: 1.6rem;
           font-weight: bold;
+
+          & > a {
+            color: $medium;
+            position: relative;
+            display: block;
+            padding: 1.6rem;
+            width: max-content;
+            text-align: center;
+            transition: 0.5s;
+            text-align: center;
+          }
+
+          & > a:hover {
+            box-shadow: 0.4rem 0.4rem 0.1rem rgba(9, 0, 0, 0.1);
+            border-radius: 2.4rem;
+            color: $dark;
+          }
+
+          .active {
+            box-shadow: 0.4rem 0.4rem 0.1rem rgba(9, 0, 0, 0.1);
+            color: $dark;
+            border-radius: 2.4rem;
+          }
         }
       }
     }

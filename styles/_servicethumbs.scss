@@ -4,9 +4,9 @@
 
   .servicesthumbs {
     background-color: $light;
-    padding-block: 3rem;
+    padding-block: 3.2rem;
     display: flex;
-    gap: 3rem;
+    gap: 3.2rem;
     align-items: center;
     justify-content: center;
     padding-inline: 5rem;
@@ -26,21 +26,22 @@
     }
 
     .services {
+
       flex-basis: 32rem;
       flex-grow: 0;
       display: flex;
-      gap: 1rem;
+      gap: .8rem;
       & > a {
         text-align: center;
         background-color: white;
         border-radius: 0.5rem;
-        padding: 0.6rem;
+        padding: 0.8rem;
         display: block;
         flex-basis: 6rem;
-        & > div {
+        & > div:nth-of-type(1) {
           height: 3rem;
         }
-        & > h4 {
+        & > div:nth-of-type(2) {
           line-height: 0.8rem;
           margin-top: 0.3rem;
           font-size: 1rem;

@@ -1,24 +1,24 @@
 .section-card {
-  padding-inline: 5rem;
-  padding-block: 5rem;
+  padding-inline: 5.6rem;
+  padding-top: 5rem;
+  padding-bottom: 6rem;
 
   h3 {
     font-size: 1.6rem;
     color: $dark;
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: 1.6rem;
-    padding-left: 1.5rem;
+    margin-bottom: 1.4rem;
   }
 
   & > div {
     display: flex;
-    gap: 2rem;
+    gap: 2.4rem;
     flex-wrap: wrap;
     justify-content: center;
     & > div {
-      flex-basis: 19%;
-      flex-grow: none;
+      flex-basis: 21rem;
+      flex-grow: 0;
     }
   }
 }

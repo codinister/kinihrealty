@@ -8,12 +8,8 @@ import Googlemap from '@/utils/Googlemap';
 import { useSearchParams } from 'next/navigation';
 import { useState } from 'react';
 
-
-
 const Propertydetails = () => {
-
-  const [state,setState] = useState(false)
-
+  const [state, setState] = useState(false);
 
   const query = useSearchParams();
   const id = query ? query.get('query') : '';
@@ -100,7 +96,7 @@ const Propertydetails = () => {
             <h3>GHs {price}</h3>
             <h4>{title}</h4>
             <div>{excerpt}</div>
-            <button onClick={()=> setState(true)}>Request a tour</button>
+            <button onClick={() => setState(true)}>Request a tour</button>
           </div>
         </div>
       </div>
