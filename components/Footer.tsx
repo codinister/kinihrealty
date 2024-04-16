@@ -67,7 +67,7 @@ const Footer = () => {
               </li>
               <li>
                 <span>
-                  <i className="fa fa-tiktalk"></i>{' '}
+                  <i className="fa-brands fa fa-tiktok"></i>{' '}
                 </span>{' '}
                 <span>Tik Talk</span>
               </li>

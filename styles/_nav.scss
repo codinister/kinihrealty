@@ -8,6 +8,7 @@
     border-radius: 1.5rem;
   }
   nav {
+
     box-shadow: 0 0 2rem rgba(9, 0, 0, 0.4);
     padding-block: 1rem;
 
@@ -64,7 +65,18 @@
   }
 }
 
+
+
+
+
+
+
+
+
+
 @media (max-width: 35em) {
+
+
   .showname {
     left: 0;
   }
@@ -74,7 +86,7 @@
   }
 
   .humberger {
-    z-index: 6;
+    z-index: 99999;
     width: 2rem;
     height: 2rem;
     background-color: white;
@@ -85,19 +97,54 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    span {
-      display: block;
-      border-bottom: solid #777 0.5rem;
-    }
+    margin: 1.6rem;
+
   }
+
+
   nav {
+
     transition: 0.2s;
     height: 100vh;
     position: fixed;
     left: -100%;
     top: 0;
     width: 100%;
-    z-index: 9;
+    z-index: 999999;
+    box-shadow: 0 0 2rem rgba(9, 0, 0, 0.4);
+   
+
+
+
+
+
+
+    & > div:nth-of-type(1) {
+      height: 100vh;
+      width: 70%;
+      background-color: white;
+      padding: 1.4em;
+      & > div:nth-of-type(1) {
+
+
+        & > div:nth-of-type(1){
+          img {
+            height: 8rem;
+            border-radius: 2rem;
+          }
+        }
+
+
+  
+        & > div:nth-of-type(2){
+         a{
+          display: block; 
+          font-size: 1.6rem; 
+          margin-bottom: 1.6rem;
+         }
+        }
+      }
+    }
 
     & > div:nth-of-type(2) {
       background-color: rgba(9, 0, 0, 0.8);
@@ -107,28 +154,6 @@
       top: 0;
       left: 0;
       z-index: -1;
-    }
-    & > div:nth-of-type(1) {
-      height: 100vh;
-      width: 70%;
-      background-color: white;
-      padding: 1.4em;
-      & > div:nth-of-type(1) {
-        img {
-          height: 8rem;
-        }
-      }
-
-      & > div:nth-of-type(3) {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        & > a {
-          display: block;
-          font-size: 1.6rem;
-          flex: 1rem 1 1;
-        }
-      }
     }
   }
 }

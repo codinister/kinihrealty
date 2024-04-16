@@ -1,3 +1,7 @@
+
+@media(min-width: 35em){  
+
+
 .section-card {
   padding-inline: 5.6rem;
   padding-top: 5rem;
@@ -22,3 +26,34 @@
     }
   }
 }
+
+}
+
+
+
+
+
+
+
+@media(max-width: 35em){  
+
+
+  .section-card {
+    padding-inline: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+
+  
+    h3 {
+      font-size: 2rem;
+      color: $dark;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 3.2rem;
+    }
+  
+
+  }
+  
+  }
+  

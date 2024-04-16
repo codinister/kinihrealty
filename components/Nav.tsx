@@ -10,9 +10,13 @@ const Nav = () => {
 
   return (
     <>
+
       <nav className={openbox ? 'showname' : 'hidenav'}>
+
         <div className="container">
+
           <div>
+
             <div>
               <Link href="/">
               <Image
@@ -45,14 +49,22 @@ const Nav = () => {
                 Blog
               </Link>
             </div>
+            
           </div>
+
+
         </div>
 
         <div onClick={() => setOpenbox(false)}></div>
+
       </nav>
+
+
       <div className="humberger" onClick={() => setOpenbox(true)}>
         <Image src="/hamburger.jpg" width="70" height="70" alt="" />
       </div>
+
+
     </>
   );
 };

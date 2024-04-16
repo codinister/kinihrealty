@@ -1,93 +1,167 @@
-footer {
-  position: relative;
-  overflow: hidden;
+@media (min-width: 35em) {
+  footer {
+    position: relative;
+    overflow: hidden;
 
-  &::before {
-    content: attr(data-name);
-    font-size: 15rem;
-    position: absolute;
+    &::before {
+      content: attr(data-name);
+      font-size: 15rem;
+      position: absolute;
 
-    left: 4%;
+      left: 4%;
 
-    opacity: 0.2;
-    bottom: 10rem;
-  }
+      opacity: 0.2;
+      bottom: 10rem;
+    }
 
-  .fa {
-    display: block;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    border: solid 0.1rem $light;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  & > div:nth-of-type(1) {
-    background-color: #333;
-    height: 30rem;
-    padding: 2rem;
-    display: flex;
-
-    color: $light;
-
-    flex-wrap: wrap;
+    .fa {
+      display: block;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      border: solid 0.1rem $light;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
     & > div:nth-of-type(1) {
-      flex: 10rem 1 1;
+      background-color: #333;
+      height: 30rem;
+      padding: 2rem;
       display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      padding-block: 5.6rem;
-      & > div {
-        flex: 35rem 0 1;
 
+      color: $light;
+
+      flex-wrap: wrap;
+
+      & > div:nth-of-type(1) {
+        flex: 10rem 1 1;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding-block: 5.6rem;
         & > div {
-          & > span {
-            display: block;
-            margin-bottom: 1.6rem;
+          flex: 35rem 0 1;
+
+          & > div {
+            & > span {
+              display: block;
+              margin-bottom: 1.6rem;
+            }
+            display: flex;
+            gap: 1.6rem;
           }
-          display: flex;
-          gap: 1.6rem;
+        }
+      }
+
+      & > div:nth-of-type(2) {
+        flex: 40rem 1 1;
+        display: flex;
+        align-items: flex-start;
+        padding-block: 5.6rem;
+        justify-content: flex-start;
+        & > div {
+          flex: 20rem 0 1;
+          ul {
+            li {
+              margin-bottom: 1.6rem;
+              display: flex;
+              gap: 1.6rem;
+            }
+          }
         }
       }
     }
 
     & > div:nth-of-type(2) {
-      flex: 40rem 1 1;
+      padding: 1rem;
+      text-align: center;
+      color: $dark;
+    }
+
+    & > div:nth-of-type(3) {
+      position: absolute;
+      width: 50rem;
+      height: 140%;
+      background-color: $light;
+      top: -5rem;
+      right: -12rem;
+      border-radius: 50%;
+      border: solid 0.8rem white;
+      box-shadow: -2rem -1rem 2rem rgba(0, 0, 0, 0.8);
+    }
+  }
+}
+
+@media (max-width: 35em) {
+  footer {
+    position: relative;
+    overflow: hidden;
+    background-color: #333;
+
+    color: $light;
+
+    .fa {
+      display: block;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      border: solid 0.1rem $light;
       display: flex;
-      align-items: flex-start;
-      padding-block: 5.6rem;
-      justify-content: flex-start;
-      & > div {
-        flex: 20rem 0 1;
-        ul {
-          li {
-            margin-bottom: 1.6rem;
-            display: flex; 
+      justify-content: center;
+      align-items: center;
+    }
+
+    & > div:nth-of-type(1) {
+      padding: 2.4rem;
+
+      & > div:nth-of-type(1) {
+        & > div {
+          flex: 35rem 0 1;
+
+          & > div {
+            & > span {
+              display: block;
+              margin-bottom: 1.6rem;
+            }
+            display: flex;
             gap: 1.6rem;
           }
         }
       }
+
+      & > div:nth-of-type(2) {
+        & > div {
+          flex: 20rem 0 1;
+          ul {
+            li {
+              margin-bottom: 1.6rem;
+              display: flex;
+              gap: 1.6rem;
+            }
+          }
+        }
+      }
     }
-  }
 
-  & > div:nth-of-type(2) {
-    padding: 1rem;
-    text-align: center;
-    color: $dark;
-  }
+    & > div:nth-of-type(2) {
+      padding: 1rem;
+      text-align: center;
+      color: $dark;
+      background-color: white;
+    }
 
-  & > div:nth-of-type(3) {
-    position: absolute;
-    width: 50rem;
-    height: 140%;
-    background-color: $light;
-    top: -5rem;
-    right: -12rem;
-    border-radius: 50%;
-    border: solid 0.8rem white;
-    box-shadow: -2rem -1rem 2rem rgba(0, 0, 0, 0.8);
+    & > div:nth-of-type(3) {
+      position: absolute;
+      width: 20rem;
+      height: 20rem;
+
+      bottom: 5rem;
+      right: -6rem;
+      border-radius: 50%;
+      border: solid 0.8rem white;
+      box-shadow: -0.5rem -0.5rem 2rem rgba(0, 0, 0, 0.2);
+    }
   }
 }
