@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import Nav from '@/components/Nav';
 import type { Metadata } from 'next';
 import './globals.scss';
+import { Suspense } from 'react';
 
 const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,7 +20,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Nav />
+        <Suspense>
         {children}
+        </Suspense>
         <Footer />
       </body>
     </html>

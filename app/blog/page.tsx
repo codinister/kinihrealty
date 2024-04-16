@@ -1,18 +1,7 @@
 'use client';
 
-import Houseforrent from '@/components/Houseforrent';
-import Servicesthumbs from '@/components/Servicesthumbs';
-import usePagecat from '@/utils/usePagecat';
-
-const Rent = () => {
-  const { result, cat } = usePagecat('rent');
-
-  return (
-    <>
-      <Servicesthumbs cat={cat} url="/rent" />
-      <Houseforrent data={result} />
-    </>
-  );
+const Blog = () => {
+  return <div>BLOG</div>;
 };
 
-export default Rent;
+export default Blog
