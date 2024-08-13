@@ -56,9 +56,8 @@ const Sell = () => {
             </button>
           </div>
         </div>
-  
+
         <Houseforsale data={result} />
-     
       </div>
 
       <Modal component={SalesForm} state={state} setState={setState} />
