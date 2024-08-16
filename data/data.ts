@@ -1,6 +1,7 @@
 import { LocaleRouteNormalizer } from 'next/dist/server/future/normalizers/locale-route-normalizer';
 
 export const data = [
+  
   {
     id: '1',
     title: 'Ashongman estate pure water',
@@ -10,7 +11,6 @@ export const data = [
     img: '/data/img1.jpg',
     excerpt: '2 Bedroom,1 bath, 1 kitchen,big compound',
     body: 'This is where full description will appear',
-
     youtube: "https://www.youtube.com/watch?v=PVeEmLTusBc",
     gallery: [],
   },

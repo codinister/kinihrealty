@@ -4,21 +4,25 @@ import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
 import Searchbox from './Searchbox';
 import { DATATYPE } from '@/types/types';
+import useGetQuery from '@/data/query/useGetQuery';
 
-type DT = {
-  data: DATATYPE[];
-};
 
-const Hero = ({ data }: DT) => {
+const Hero = () => {
+
+
+  const data  = useGetQuery('slider', '/slider') || []
+
+
+
   const images = [
     {
-      url: data[0]?.img,
+      url: data[0]?.image,
     },
     {
-      url: data[1]?.img,
+      url: data[1]?.image,
     },
     {
-      url: data[2]?.img,
+      url: data[2]?.image,
     },
   ];
 

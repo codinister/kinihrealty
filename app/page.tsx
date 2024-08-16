@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
     <>
-      <Hero data={obj} />
+      <Hero  />
       <Ourservices />
       <Featuredproperties data={data} />
       <Houseforsale data={sell} />

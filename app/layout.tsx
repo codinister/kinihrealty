@@ -5,6 +5,7 @@ import Nav from '@/components/Nav';
 import type { Metadata } from 'next';
 import './globals.scss';
 import { Suspense } from 'react';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
 const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,14 +17,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const client = new QueryClient();
+
   return (
     <html lang="en">
       <body>
-        <Nav />
-        <Suspense>
-        {children}
-        </Suspense>
-        <Footer />
+        <QueryClientProvider client={client}>
+          <Nav />
+          <Suspense>{children}</Suspense>
+          <Footer />
+        </QueryClientProvider>
       </body>
     </html>
   );

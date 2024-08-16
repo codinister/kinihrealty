@@ -1,19 +1,18 @@
 import { data } from '@/data/data';
+import useGetQuery from '@/data/query/useGetQuery';
 import Link from 'next/link';
 
 const Services = () => {
-  const unique = Object.values(
-    data.reduce((a: any, b) => {
-      if (a[b.type]) {
-        a[b.type] = b;
-      } else {
-        a[b.type] = b;
-      }
-      return a;
-    }, {})
-  );
 
-  const obj = unique.filter((v: any) => v.type !== 'featured');
+  const newprop = useGetQuery('new', '/new') || []
+const rent  = useGetQuery('rent', '/rent') || []
+const sell  = useGetQuery('sell', '/sell') || []
+const buy = useGetQuery('buy', '/buy') || []
+
+
+const obj = [newprop[0], rent[0], sell[0], buy[0]]
+
+
 
   return (
     <>
@@ -21,7 +20,7 @@ const Services = () => {
         <Link href={`/${v.type}`} key={k} className="serv-card">
           <div
             style={{
-              backgroundImage: `url(${v.img})`,
+              backgroundImage: `url(${v.image})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
