@@ -16,8 +16,12 @@ const Modal = ({ component: Component, state, setState }: ModalType) => {
     }
   }, [state]);
 
-  if (document.querySelector('body')) {
-    return createPortal(
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+
+  const Modalbox = () => {
+    return (
       <div className={`modal-box ${state ? 'show' : 'hide'}`}>
         <div onClick={() => setState(false)}></div>
 
@@ -26,10 +30,11 @@ const Modal = ({ component: Component, state, setState }: ModalType) => {
             <Component />
           </div>
         </div>
-      </div>,
-      document.querySelector('body') as HTMLElement
+      </div>
     );
-  }
+  };
+
+  return mounted ? createPortal(<Modalbox />, document.body) : null;
 };
 
 export default Modal;

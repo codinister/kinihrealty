@@ -1,0 +1,361 @@
+@media (min-width: 35em) {
+  .blogsection {
+    padding-block: 5.6rem;
+
+    .container {
+      & > a {
+        display: block;
+        background-color: var(--danger);
+        padding: 1.6rem;
+        color: white;
+        text-align: center;
+      }
+      & > div {
+        display: flex;
+        gap: 3.2rem;
+        & > div {
+          flex: 10rem 1 1;
+        }
+
+        h6 {
+          margin-bottom: 0.8rem;
+          font-size: 1.6rem;
+        }
+        & > div:nth-of-type(1) {
+          & > div {
+            border-radius: 1.5rem;
+          }
+
+          & > div:nth-of-type(1) {
+            height: 32rem;
+            margin-bottom: 2.4rem;
+          }
+
+          & > div:nth-of-type(2) {
+            button {
+              margin-top: 1.6rem;
+            }
+          }
+        }
+        & > div:nth-of-type(2) {
+          .post-card {
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 2.4rem;
+            & > div:nth-of-type(1) {
+              height: 16rem;
+              flex: 25rem 0 1;
+              border-radius: 1.5rem;
+            }
+
+            & > div:nth-of-type(2) {
+              flex: 30rem 0 1;
+
+              & > div:nth-of-type(1) {
+                font-size: 1.2rem;
+              }
+
+              & > div:nth-of-type(2) {
+                margin-bottom: 1.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .archive {
+    padding-block: 6.4rem;
+    & > div:nth-of-type(1) {
+    }
+
+    & > div:nth-of-type(2) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.4rem;
+      justify-content: center;
+    }
+  }
+
+  .postcard {
+    flex: 25rem 0 1;
+
+    & > div:nth-of-type(1) {
+      height: 15rem;
+    }
+
+    & > div:nth-of-type(2) {
+      & > div:nth-of-type(1) {
+        font-size: 1.2rem;
+        margin-top: 1.6rem;
+      }
+
+      & > h4 {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .singlepage {
+    padding: 12.8rem 0 6.4rem 0;
+    background-color: #f6eee1;
+
+    & > div {
+      display: flex;
+      flex-wrap: wrap;
+
+      & > div:nth-of-type(1) {
+        flex: 60rem 1 1;
+        background-color: white;
+        padding: 2.4rem;
+        h2 {
+          margin-bottom: 1.6rem;
+        }
+        & > div:nth-of-type(1) {
+          height: 40rem;
+          margin-bottom: 4rem;
+        }
+      }
+      & > div:nth-of-type(2) {
+        flex: 20rem 1 1;
+        background-color: white;
+        padding: 2.4rem;
+      }
+    }
+  }
+
+  .sidebarpostcardsm {
+    cursor: pointer;
+    border-radius: 1.6rem; 
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.2);
+    height: 13rem;
+    margin-top: 1.6rem;
+    
+    & > div:nth-of-type(1) {
+      flex: 10rem 1 0;
+    }
+    & > div:nth-of-type(2) {
+      flex: 20rem 1 0;
+      background-color: white;
+      padding: 1.6rem;
+      & > span{
+        font-size: 1rem;
+        display: block; 
+        border-bottom: .1rem solid #ccc;
+   
+      }
+    }
+  }
+
+  .sidebarpostcardlg {
+    cursor: pointer;
+    height: 20rem;
+    padding: 2.4rem;
+    position: relative;
+    z-index: 1;
+    color: white;
+    border-radius: 1.6rem;
+    overflow: hidden;
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+    }
+
+    h5 {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 35em) {
+
+  .blogsection {
+    padding: 2.4rem;
+
+    .container {
+      & > a {
+        display: block;
+        background-color: var(--danger);
+        padding: 1.6rem;
+        color: white;
+        text-align: center;
+      }
+      & > div {
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+        & > div {
+          flex: 10rem 1 1;
+        }
+
+        h6 {
+          margin-bottom: 0.8rem;
+          font-size: 1.6rem;
+        }
+        & > div:nth-of-type(1) {
+          & > div {
+            border-radius: 1.5rem;
+          }
+
+          & > div:nth-of-type(1) {
+            height: 32rem;
+            margin-bottom: 2.4rem;
+          }
+
+          & > div:nth-of-type(2) {
+            button {
+              margin-top: 1.6rem;
+            }
+          }
+        }
+        & > div:nth-of-type(2) {
+          .post-card {
+    
+            display: flex;
+   
+            flex-direction: column;
+            & > div:nth-of-type(1) {
+              height: 16rem;
+              flex: 25rem 0 1;
+              border-radius: 1.5rem;
+            }
+
+            & > div:nth-of-type(2) {
+              flex: 10rem 0 1;
+              margin-bottom: 2.4rem;
+              & > div:nth-of-type(1) {
+                font-size: 1.2rem;
+              }
+
+              & > div:nth-of-type(2) {
+                margin-bottom: 1.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .archive {
+    padding-block: 6.4rem;
+    & > div:nth-of-type(1) {
+    }
+
+    & > div:nth-of-type(2) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.4rem;
+      justify-content: center;
+    }
+  }
+
+  .postcard {
+    flex: 25rem 0 1;
+
+    & > div:nth-of-type(1) {
+      height: 15rem;
+    }
+
+    & > div:nth-of-type(2) {
+      & > div:nth-of-type(1) {
+        font-size: 1.2rem;
+        margin-top: 1.6rem;
+      }
+
+      & > h4 {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .singlepage {
+    padding: 12.8rem 0 6.4rem 0;
+    background-color: #f6eee1;
+
+    & > div {
+      display: flex;
+      flex-wrap: wrap;
+
+      & > div:nth-of-type(1) {
+        flex: 60rem 1 1;
+        background-color: white;
+        padding: 2.4rem;
+        h2 {
+          margin-bottom: 1.6rem;
+        }
+        & > div:nth-of-type(1) {
+          height: 40rem;
+          margin-bottom: 4rem;
+        }
+      }
+      & > div:nth-of-type(2) {
+        flex: 20rem 1 1;
+        background-color: white;
+        padding: 2.4rem;
+      }
+    }
+  }
+
+  .sidebarpostcardsm {
+    cursor: pointer;
+    border-radius: 1.6rem; 
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.2);
+    height: 13rem;
+    margin-top: 1.6rem;
+    
+    & > div:nth-of-type(1) {
+      flex: 10rem 1 0;
+    }
+    & > div:nth-of-type(2) {
+      flex: 20rem 1 0;
+      background-color: white;
+      padding: 1.6rem;
+      & > span{
+        font-size: 1rem;
+        display: block; 
+        border-bottom: .1rem solid #ccc;
+   
+      }
+    }
+  }
+
+  .sidebarpostcardlg {
+    cursor: pointer;
+    height: 20rem;
+    padding: 2.4rem;
+    position: relative;
+    z-index: 1;
+    color: white;
+    border-radius: 1.6rem;
+    overflow: hidden;
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+    }
+
+    h5 {
+      margin-bottom: 1rem;
+    }
+  }
+}

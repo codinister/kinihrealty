@@ -7,9 +7,8 @@ export const revalidate = 0;
 
 export async function GET(req: NextRequest) {
   try {
-    const res = await client.fetch(
-      groq`
-      *["salespage" in category[]->title && title != null]{
+    const res = await client.fetch(groq`
+     *["salespage" in category[]->title && title != null]{
         "id": _id,
             title,
             "image": img.asset->url,
@@ -22,9 +21,8 @@ export async function GET(req: NextRequest) {
               }
             }
             
-      }
-      `
-    );
+      } 
+    `);
 
     return NextResponse.json(res);
   } catch (err) {

@@ -8,29 +8,28 @@ import usePagecat from '@/utils/usePagecat';
 import { useState } from 'react';
 
 const Sell = () => {
-
   const [state, setState] = useState(false);
-  const { result, cat } = usePagecat('sell');
+  const sell  = useGetQuery('sell', '/sell') || []
 
-  const salespage  = useGetQuery('salespage', '/salespage') || []
+  const salespage = useGetQuery('salespage', '/salespage') || [];
 
-  console.log(salespage)
+
+
   return (
     <>
       <div className="sell">
         <div className="hero">
           <div>
             <div>
-              <h1>Sell your home with confidence</h1>
+              <h1>{salespage[0]?.title}</h1>
               <h6>
-                Kinih.Realty is making it simpler to sell your home and move
-                forward.
+              {salespage[0]?.excerpt}
               </h6>
             </div>
           </div>
           <div
             style={{
-              backgroundImage: "url('/data/img1.jpg')",
+              backgroundImage: `url(${salespage[0]?.image})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
@@ -40,20 +39,16 @@ const Sell = () => {
         <div className="content">
           <div
             style={{
-              backgroundImage: "url('/data/img4.jpg')",
+              backgroundImage: `url(${salespage[1]?.image})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
           ></div>
           <div>
-            <h2>Sell your home with us</h2>
+            <h2>{salespage[1]?.title}</h2>
 
             <div>
-              Deciding to sell your home yourself is referred to as
-              for-sale-by-owner (FSBO). The FSBO process is similar to
-              traditional selling, but without the help of a real estate agent.
-              In this case, you’re responsible for the home prep, marketing,
-              showings, and negotiations.
+            {salespage[1]?.excerpt}
             </div>
 
             <button onClick={() => setState(true)}>
@@ -62,7 +57,7 @@ const Sell = () => {
           </div>
         </div>
 
-        <Houseforsale data={result} />
+        <Houseforsale data={sell} />
       </div>
 
       <Modal component={SalesForm} state={state} setState={setState} />

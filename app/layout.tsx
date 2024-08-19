@@ -17,12 +17,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const client = new QueryClient();
+  const provider = new QueryClient();
 
   return (
     <html lang="en">
       <body>
-        <QueryClientProvider client={client}>
+        <QueryClientProvider client={provider}>
           <Nav />
           <Suspense>{children}</Suspense>
           <Footer />

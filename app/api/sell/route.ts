@@ -9,7 +9,7 @@ export async function GET(req: NextRequest) {
   try {
     const res = await client.fetch(
       groq`
-      *[_type == 'sell' && title != null]{
+      *[_type == 'sell' && !("salespage" in category[]->title)  &&  title != null]{
         "id": _id,
             "type": _type,
             title,
