@@ -3,36 +3,41 @@ import Form from '@/components/Form';
 import Modal from '@/components/Modal';
 import SliderCard from '@/components/SliderCard';
 import Youtubebox from '@/components/Youtubebox';
-import { data } from '@/data/data';
+import useGetQuery from '@/data/query/useGetQuery';
 import Googlemap from '@/utils/Googlemap';
 import { useSearchParams } from 'next/navigation';
 import { useState } from 'react';
+import BlockContent from '@sanity/block-content-to-react'
 
 const Propertydetails = () => {
   const [state, setState] = useState(false);
+
+  const data = useGetQuery('propertycat','/propertycat') || []
+
+
 
   const query = useSearchParams();
   const id = query ? query.get('query') : '';
 
   const [getImg, setImg] = useState('');
 
-  const item = Object.values(data).find((v) => v.id === id);
+  const item = data.filter((v: any) => v.id === id);
 
   //BEGIN ITEM LIST
-  const title = item?.title;
-  const cat = item?.cat;
-  const price = item?.price;
-  const type = item?.type;
-  const img = item?.img;
-  const excerpt = item?.excerpt;
-  const body = item?.body;
-  const gallery = item?.gallery;
+  const title = item[0]?.title;
+  const cat = item[0]?.cat;
+  const price = item[0]?.price;
+  const type = item[0]?.type;
+  const img = item[0]?.image;
+  const excerpt = item[0]?.excerpt;
+  const body = item[0]?.body;
+  const gallery = item[0]?.gallery;
 
-  const youtube = item?.youtube;
+  const youtube = item[0]?.youtube;
 
   //BEGIN OTHER LIST
   const other = data.filter(
-    (v) => v.id !== id && v.cat === cat && v.type === type
+    (v: any) => v.id !== id && v.cat === cat && v.type === type
   );
 
   const img_url = getImg ? getImg : img;
@@ -50,13 +55,13 @@ const Propertydetails = () => {
                 backgroundPosition: 'center',
               }}
             >
-              {gallery?.map((v, k) => {
+              {gallery?.map((v: any, k: number) => {
                 return (
                   <div
                     onClick={() => setImg(v)}
                     key={k}
                     style={{
-                      backgroundImage: `url(${v})`,
+                      backgroundImage: `url(${v.image})`,
                       backgroundSize: 'cover',
                       backgroundPosition: 'center',
                     }}
@@ -70,7 +75,9 @@ const Propertydetails = () => {
               <h4>{title}</h4>
             </div>
 
-            <div>{body}</div>
+            <div>
+            <BlockContent block={body} projectid={process.env.NEXT_PUBLIC_SANITY_API_KEY} />
+            </div>
 
             <div>
               <Googlemap location={cat} />
@@ -85,8 +92,8 @@ const Propertydetails = () => {
           <div className="other-card">
             <h4>Other similar properties</h4>
             <div className="slidecard">
-              {other.map((v, k) => (
-                <SliderCard key={k} data={v.gallery} val={v} />
+              {other.map((v: any, k: number) => (
+                <SliderCard key={k} gallery={v.gallery} singleimage={v} />
               ))}
             </div>
           </div>

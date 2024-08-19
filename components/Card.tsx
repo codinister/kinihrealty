@@ -12,7 +12,7 @@ const Card = ({val}: VAL) => {
       <Link href={`/propertydetails?query=${val?.id}`}>
         <div
           style={{
-            backgroundImage: `url(${val?.img})`,
+            backgroundImage: `url(${val?.image})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}

@@ -2,7 +2,6 @@
 
 
 import { DATATYPE } from '@/types/types';
-import Card from './Card';
 import SliderCard from './SliderCard';
 
 type DATA = {
