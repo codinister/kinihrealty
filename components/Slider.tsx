@@ -20,9 +20,9 @@ const Slider = ({ data, width, height }: DT) => {
   //   },
   // ]
 
-  const images = Object.values(data).map((v, k) => {
+  const images = Object.values(data).map((v: any, k) => {
     return {
-      url: v,
+      url: v.image,
     };
   })
 

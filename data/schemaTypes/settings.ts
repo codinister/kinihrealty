@@ -6,6 +6,12 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
+      name: "title", 
+      title: "Title", 
+      type: "string"
+
+    }),
+    defineField({
       name: 'comp_name',
       title: 'Company Name',
       type: 'string',
@@ -85,6 +91,12 @@ export default defineType({
         hotspot: true,
       },
     }),
+    defineField({
+      name: "tiktok", 
+      title: "Tik Tok",
+      type: "string", 
+
+    })
   ],
 
   preview: {

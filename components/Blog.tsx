@@ -3,7 +3,19 @@ import Link from 'next/link';
 import Postbox from './Postbox';
 
 type DT = {
-  posts: DATATYPE[];
+  posts: {
+    body: string;
+    excerpt: string;
+    image: string;
+    mainImage: string;
+    slug: string;
+    title: string;
+    _createdAt: Date;
+    _id: string;
+    _rev: string;
+    _type: string;
+    _updatedAt: Date;
+  }[];
 };
 
 const Blog = ({ posts }: DT) => {
@@ -16,6 +28,7 @@ const Blog = ({ posts }: DT) => {
       </div>
     ))
     .slice(0, 3);
+
 
   return (
     <div className="blog">

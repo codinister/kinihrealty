@@ -3,13 +3,18 @@
 import Houseforsale from '@/components/Houseforsale';
 import Modal from '@/components/Modal';
 import SalesForm from '@/components/SalesForm';
+import useGetQuery from '@/data/query/useGetQuery';
 import usePagecat from '@/utils/usePagecat';
 import { useState } from 'react';
 
 const Sell = () => {
-  const [state, setState] = useState(false);
 
+  const [state, setState] = useState(false);
   const { result, cat } = usePagecat('sell');
+
+  const salespage  = useGetQuery('salespage', '/salespage') || []
+
+  console.log(salespage)
   return (
     <>
       <div className="sell">

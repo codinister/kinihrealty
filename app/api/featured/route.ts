@@ -11,7 +11,7 @@ export async function GET(req: NextRequest) {
       groq`
       *[_type == 'featured' && title != null]{
             "id": _id,
-            "type" : _type,
+            "type": _type,
             title,
             price,
             "image": img.asset->url,
@@ -24,8 +24,10 @@ export async function GET(req: NextRequest) {
               }
             },
             youtube,
-            category,
-            gallery
+            "category": category[]->title,
+            "gallery": gallery[]{
+            "image": asset->url
+            }
       }
       `
     );

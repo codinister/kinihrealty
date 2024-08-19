@@ -1,19 +1,8 @@
-import { data } from '@/data/data';
+import useGetQuery from '@/data/query/useGetQuery';
 
 const Footer = () => {
-  const unique = Object.values(
-    data.reduce((a: any, b) => {
-      if (a[b.type]) {
-        a[b.type] = b;
-      } else {
-        a[b.type] = b;
-      }
-
-      return a;
-    }, {})
-  );
-
-  const obj = unique.filter((v: any) => v.type !== 'featured');
+  const set = useGetQuery('settings', '/settings') || [];
+  const sell = useGetQuery('sell', '/sell') || [];
 
   return (
     <footer data-name="Kinih.Realty">
@@ -24,23 +13,21 @@ const Footer = () => {
               <span>
                 <i className="fa fa-phone"></i>
               </span>
-              <span className="phone-bx">+233 507 173 578 </span>
+              <span className="phone-bx">{set[0]?.phone1} </span>
             </div>
             <div>
               <span>
                 <i className="fa fa-envelope"></i>
               </span>
 
-              <span className="email-bx">info@kinihrealty.com</span>
+              <span className="email-bx">{set[0]?.email}</span>
             </div>
             <div>
               <span>
                 <i className="fa fa-map-marker"></i>
               </span>
 
-              <span>
-                Tesano - Opp Ghana Communication Technology University{' '}
-              </span>
+              <span>{set[0]?.comp_address}</span>
             </div>
           </div>
         </div>
@@ -51,25 +38,41 @@ const Footer = () => {
                 <span>
                   <i className="fa fa-facebook"></i>
                 </span>{' '}
-                <span>Facebook</span>
+                <span>
+                  <a href={set[0]?.facebook} title="Facebook" target="_blank">
+                    Facebook
+                  </a>
+                </span>
               </li>
               <li>
                 <span>
                   <i className="fa fa-twitter"></i>{' '}
                 </span>{' '}
-                <span>Twitter</span>
+                <span>
+                  <a href={set[0]?.twitter} title="Twitter" target="_blank">
+                    Twitter
+                  </a>
+                </span>
               </li>
               <li>
                 <span>
                   <i className="fa fa-instagram"></i>
-                </span>{' '}
-                <span> Instagram</span>
+                </span>
+                <span>
+                  <a href={set[0]?.instagram} title="Instagram" target="_blank">
+                    Instagram
+                  </a>
+                </span>
               </li>
               <li>
                 <span>
-                  <i className="fa-brands fa fa-tiktok"></i>{' '}
-                </span>{' '}
-                <span>Tik Talk</span>
+                  <i className=" fa  fa-tiktok"></i>
+                </span>
+                <span>
+                  <a href={set[0]?.tiktok} title="Tik Tok" target="_blank">
+                    Tik Tok
+                  </a>
+                </span>
               </li>
             </ul>
           </div>
@@ -80,7 +83,7 @@ const Footer = () => {
 
       <div
         style={{
-          backgroundImage: "url('/data/img1.jpg')",
+          backgroundImage: `URL(${sell[0]?.image})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

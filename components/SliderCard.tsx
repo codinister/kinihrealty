@@ -4,21 +4,21 @@ import Slider from './Slider';
 import Noslider from './Noslider';
 
 type VAL = {
-  val: DATATYPE;
-  data: string[] | undefined;
+  singleimage: DATATYPE;
+  gallery: string[];
 };
 
-const SliderCard = ({ val, data }: VAL) => {
+const SliderCard = ({ singleimage, gallery }: VAL) => {
   const width = '23rem';
   const height = '10rem';
 
   let image: React.ReactNode;
-  const arr = data;
 
-  if (data?.length) {
-    image = <Slider data={data} height={height} width={width} />;
+
+  if (gallery?.length) {
+    image = <Slider data={gallery} height={height} width={width} />;
   } else {
-    image = <Noslider width={width} height={height} url={val?.img} />;
+    image = <Noslider width={width} height={height} url={singleimage?.image} />;
   }
 
   return (
@@ -26,9 +26,9 @@ const SliderCard = ({ val, data }: VAL) => {
       {image}
 
       <div>
-        <Link href={`/propertydetails?query=${val?.id}`}>
-          <h6>GHs {val?.price}</h6>
-          <div>{val?.excerpt}</div>
+        <Link href={`/propertydetails?query=${singleimage?.id}`}>
+          <h6>GHs {singleimage?.price}</h6>
+          <div>{singleimage?.excerpt}</div>
         </Link>
       </div>
     </div>

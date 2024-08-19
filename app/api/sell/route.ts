@@ -10,9 +10,9 @@ export async function GET(req: NextRequest) {
     const res = await client.fetch(
       groq`
       *[_type == 'sell' && title != null]{
-            "id": _id,
-            "type" : _type,
-           title,
+        "id": _id,
+            "type": _type,
+            title,
             price,
             "image": img.asset->url,
             excerpt,
@@ -24,8 +24,10 @@ export async function GET(req: NextRequest) {
               }
             },
             youtube,
-            category,
-            gallery
+            "category": category[]->title,
+            "gallery": gallery[]{
+            "image": asset->url
+            }
       }
       `
     );

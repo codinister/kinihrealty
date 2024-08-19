@@ -2,7 +2,7 @@ import { DATATYPE } from '@/types/types';
 import Link from 'next/link';
 
 type POSTBOXTYPE = {
-  value: DATATYPE;
+  value: any
 };
 
 const Postbox = ({ value }: POSTBOXTYPE) => {
@@ -10,7 +10,7 @@ const Postbox = ({ value }: POSTBOXTYPE) => {
     <div className="post-box">
       
     <div style={{
-      backgroundImage: `url(${value.img})`,
+      backgroundImage: `url(${value.image})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center', 
 

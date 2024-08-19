@@ -1,10 +1,30 @@
-import { data } from '@/data/data';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { DATATYPE } from '@/types/types';
+import useGetQuery from '@/data/query/useGetQuery';
 
 const Searchbox = () => {
+  const path = usePathname();
+
+  const newprop = useGetQuery('new', '/new') || [];
+  const rent = useGetQuery('rent', '/rent') || [];
+  const sell = useGetQuery('sell', '/sell') || [];
+  const buy = useGetQuery('buy', '/buy') || [];
+
+  let data = null;
+
+  if (path === '/buy') {
+    data = buy;
+  } else if (path === '/new') {
+    data = newprop;
+  } else if (path === '/rent') {
+    data = rent;
+  } else {
+    data = sell;
+  }
+
   type DESC = DATATYPE[];
   const [showResults, setResults] = useState([] as DESC);
   const [getVal, setVal] = useState('');
@@ -18,7 +38,7 @@ const Searchbox = () => {
       return setResults([]);
     }
 
-    const arr = data.filter((v) =>
+    const arr = data.filter((v: any) =>
       Object.values(v).join('').toLowerCase().includes(val.toLowerCase())
     );
     setResults(arr);

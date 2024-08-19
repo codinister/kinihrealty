@@ -1,11 +1,12 @@
 export type DATATYPE = {
-  id: string | number;
-  title: string
-  cat: string
-  price: string
-  type: string
-  img: string
-  excerpt: string
-  body: string
-  gallery: string[]
+  body: any;
+  cat: string[];
+  excerpt: any;
+  gallery: string[];
+  id: string; 
+  image: string; 
+  price: string;
+  title: string;
+  type: string; 
+  youtube: string;
 }

@@ -11,6 +11,10 @@ type DT = {
 };
 
 const Servicesthumbs = ({ cat, url }: DT) => {
+
+
+
+
   const query = useSearchParams();
   const q = query.get('query');
 

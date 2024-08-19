@@ -9,7 +9,7 @@ export async function GET(req: NextRequest) {
   try {
     const res = await client.fetch(
       groq`
-      *[_type == 'rent' && title != null]{
+      *[_type == 'new' || _type == 'rent' || _type == 'sell'  || _type == 'buy' && title != null]{
             "id": _id,
             "type": _type,
             title,
@@ -24,10 +24,11 @@ export async function GET(req: NextRequest) {
               }
             },
             youtube,
-            "category": category[]->title,
+            "cat": category[]->title,
             "gallery": gallery[]{
             "image": asset->url
             }
+            
       }
       `
     );

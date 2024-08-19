@@ -1,6 +1,5 @@
 'use client';
 
-
 import Blog from '@/components/Blog';
 import Featuredproperties from '@/components/Featuredproperties';
 import Hero from '@/components/Hero';
@@ -9,23 +8,23 @@ import Houseforsale from '@/components/Houseforsale';
 import Houseforrent from '@/components/Houseforrent';
 import Housetobuy from '@/components/Housetobuy';
 import Newdevelopment from '@/components/Newdevelopment';
-import { data } from '@/data/data';
 import { posts } from '@/data/data';
-import { DATATYPE } from '@/types/types';
+import useGetQuery from '@/data/query/useGetQuery';
 
 export default function Home() {
-  const obj: DATATYPE[] = data;
-
-  const newd = obj.filter((v) => v.type === 'new').slice(0, 8);
-  const rent = obj.filter((v) => v.type === 'rent').slice(0, 8);
-  const buy = obj.filter((v) => v.type === 'buy').slice(0, 8);
-  const sell = obj.filter((v) => v.type === 'sell').slice(0, 8);
+  
+  const newd = useGetQuery('new', '/new') || [];
+  const rent = useGetQuery('rent', '/rent') || [];
+  const sell = useGetQuery('sell', '/sell') || [];
+  const buy = useGetQuery('buy', '/buy') || [];
+  const featured = useGetQuery('featured', '/featured') || [];
+  const posts = useGetQuery('post', '/post') || [];
 
   return (
     <>
-      <Hero  />
+      <Hero />
       <Ourservices />
-      <Featuredproperties data={data} />
+      <Featuredproperties data={featured} />
       <Houseforsale data={sell} />
       <Houseforrent data={rent} />
       <Housetobuy data={buy} />
