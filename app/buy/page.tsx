@@ -6,6 +6,8 @@ import usePagecat from '@/utils/usePagecat';
 
 const Buy = () => {
   const { result, cat } = usePagecat('buy');
+
+  console.log(result)
   return (
     <>
       <Servicesthumbs cat={cat} url="/buy" />

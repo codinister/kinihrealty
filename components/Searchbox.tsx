@@ -12,6 +12,7 @@ const Searchbox = () => {
   const rent = useGetQuery('rent', '/rent') || [];
   const sell = useGetQuery('sell', '/sell') || [];
   const buy = useGetQuery('buy', '/buy') || [];
+  const propertycat = useGetQuery('propertycat', '/propertycat') || [];
 
   let data = null;
 
@@ -21,8 +22,10 @@ const Searchbox = () => {
     data = newprop;
   } else if (path === '/rent') {
     data = rent;
+  } else if (path === '/sell') {
+    data = rent;
   } else {
-    data = sell;
+    data = propertycat;
   }
 
   type DESC = DATATYPE[];

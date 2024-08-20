@@ -76,7 +76,7 @@ const Propertydetails = () => {
             </div>
 
             <div>
-            <BlockContent block={body} projectid={process.env.NEXT_PUBLIC_SANITY_API_KEY} />
+            <BlockContent blocks={body} projectid={process.env.NEXT_PUBLIC_SANITY_API_KEY} />
             </div>
 
             <div>

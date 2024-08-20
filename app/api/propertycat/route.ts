@@ -6,10 +6,14 @@ export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function GET(req: NextRequest) {
+
+
+
+
   try {
     const res = await client.fetch(
       groq`
-      *[_type == 'new' || _type == 'rent' || _type == 'sell'  || _type == 'buy' && title != null]{
+      *[_type in ['new','rent','sell','buy','featured'] ]{
             "id": _id,
             "type": _type,
             title,
