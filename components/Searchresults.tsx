@@ -1,4 +1,4 @@
-import { data } from '@/data/data';
+
 import Sectioncard from './Sectioncard';
 import useGetQuery from '@/data/query/useGetQuery';
 
