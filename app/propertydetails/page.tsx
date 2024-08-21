@@ -7,14 +7,14 @@ import useGetQuery from '@/data/query/useGetQuery';
 import Googlemap from '@/utils/Googlemap';
 import { useSearchParams } from 'next/navigation';
 import { useState } from 'react';
-import BlockContent from '@sanity/block-content-to-react'
+import BlockContent from '@sanity/block-content-to-react';
+import Noslider from '@/components/Noslider';
+import Slider from '@/components/Slider';
 
 const Propertydetails = () => {
   const [state, setState] = useState(false);
 
-  const data = useGetQuery('propertycat','/propertycat') || []
-
-
+  const data = useGetQuery('propertycat', '/propertycat') || [];
 
   const query = useSearchParams();
   const id = query ? query.get('query') : '';
@@ -42,12 +42,27 @@ const Propertydetails = () => {
 
   const img_url = getImg ? getImg : img;
 
+  const width = '100%';
+  const height = '50rem';
+
+  let image: React.ReactNode;
+
+  if (gallery?.length) {
+    image = <Slider data={gallery} height={height} width={width} />;
+  } else {
+    image = <Noslider width={width} height={height} url={img_url} />;
+  }
+
   return (
     <>
       <div className="propertydetails">
+
+        
         <div>
           <div>
-            <div
+            {image}
+
+            {/* <div
               className="item-img"
               style={{
                 backgroundImage: `url(${img_url})`,
@@ -55,10 +70,11 @@ const Propertydetails = () => {
                 backgroundPosition: 'center',
               }}
             >
+              <div>
               {gallery?.map((v: any, k: number) => {
                 return (
                   <div
-                    onClick={() => setImg(v)}
+                    onClick={() => setImg(v.image)}
                     key={k}
                     style={{
                       backgroundImage: `url(${v.image})`,
@@ -68,15 +84,19 @@ const Propertydetails = () => {
                   ></div>
                 );
               })}
-            </div>
+              </div>
+            </div> */}
 
             <div>
-              <h3>GHs {price}</h3>
+              <h3> {price}</h3>
               <h4>{title}</h4>
             </div>
 
             <div>
-            <BlockContent blocks={body} projectid={process.env.NEXT_PUBLIC_SANITY_API_KEY} />
+              <BlockContent
+                blocks={body}
+                projectid={process.env.NEXT_PUBLIC_SANITY_API_KEY}
+              />
             </div>
 
             <div>
@@ -100,7 +120,7 @@ const Propertydetails = () => {
         </div>
         <div>
           <div>
-            <h3>GHs {price}</h3>
+            <h3> {price}</h3>
             <h4>{title}</h4>
             <div>{excerpt}</div>
             <button onClick={() => setState(true)}>Request a tour</button>

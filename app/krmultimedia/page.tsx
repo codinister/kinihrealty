@@ -1,15 +1,7 @@
 'use client';
 
-
-
 const Rent = () => {
-
-
-  return (
-    <>
-    MARKETING
-    </>
-  );
+  return <>MARKETING</>;
 };
 
 export default Rent;

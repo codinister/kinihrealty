@@ -2,12 +2,15 @@
 
 import Searchresults from '@/components/Searchresults';
 import Servicesthumbs from '@/components/Servicesthumbs';
+import useGetQuery from '@/data/query/useGetQuery';
 import { useSearchParams } from 'next/navigation';
-import { data } from '@/data/data';
 import { useState } from 'react';
 
 const Search = () => {
   const [getCat, setCat] = useState('');
+
+
+  const data = useGetQuery('propertycat','/propertycat')
 
   const q = useSearchParams();
 
@@ -26,13 +29,13 @@ const Search = () => {
 
   const cat = Object.values(
     data
-      .filter((v) =>
+      .filter((v: any) =>
         Object.values(v)
           .join('')
           .toLowerCase()
           .includes(query_val.toLowerCase())
       )
-      .reduce((a: any, b) => {
+      .reduce((a: any, b: any) => {
         if (a[b.cat]) {
           a[b.cat] = b;
         } else {

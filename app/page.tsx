@@ -8,7 +8,6 @@ import Houseforsale from '@/components/Houseforsale';
 import Houseforrent from '@/components/Houseforrent';
 import Housetobuy from '@/components/Housetobuy';
 import Newdevelopment from '@/components/Newdevelopment';
-import { posts } from '@/data/data';
 import useGetQuery from '@/data/query/useGetQuery';
 
 export default function Home() {

@@ -27,7 +27,7 @@ const SliderCard = ({ singleimage, gallery }: VAL) => {
 
       <div>
         <Link href={`/propertydetails?query=${singleimage?.id}`}>
-          <h6>GHs {singleimage?.price}</h6>
+          <h6> {singleimage?.price}</h6>
           <div>{singleimage?.excerpt}</div>
         </Link>
       </div>

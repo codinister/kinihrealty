@@ -55,6 +55,25 @@ export default defineType({
     }),
 
 
+    defineField(
+      {
+        title: "Currency",
+        description: "Select a currency",
+        name: "currency",
+        type: "string",
+        options: {
+          list: [
+            { title: "Cedi", value: "GH₵" },
+            { title: "Dollar", value: "$" },
+            { title: "Euro", value: "€" },
+            { title: "Pound", value: "£" },
+          ],
+        },
+        validation: (Rule) => Rule.required(),
+      }
+    )
+
+
   ],
 
   preview: {
