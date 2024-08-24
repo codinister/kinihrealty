@@ -1,37 +1,46 @@
 'use client';
 
-import Postcard from '@/components/blog/Postcard';
-import Blogsection from '@/components/Blogsection';
+import { ArchiveBox, ArchiveImageBox } from '@/components/ArchiveBox';
+import Topstories from '@/components/Topstories';
 import useGetQuery from '@/data/query/useGetQuery';
-
-
 
 const Archive = () => {
   const blog = useGetQuery('postss', '/post') || [];
-  const remove = blog?.slice(0, 4).map((v: {_id: string})=> v._id)
 
-  const arr = blog?.filter((v: any)=> !remove.includes(v._id))
-
+  const topblog = blog.slice(0, 4);
+  const singleblog = blog.slice(4, 5);
+  const bloglength = blog.length;
+  const remainingblog = blog.slice(5, bloglength);
 
   return (
-    <section className="archive">
-      <Blogsection />
+    <section>
+      <Topstories />
 
-      <div className="container">
-        {arr?.map((v: any, k: number) => {
-          return (
-            <Postcard
-              key={k}
-              id={v._id}
-              img={v.image}
-              date={v._createdAt}
-              title={v.title}
-              excerpt={v.excerpt}
-              url=""
-            />
-          );
-        })}
+      <div className="large-arch-img">
+
+          <ArchiveImageBox
+            clss="arch-bx2"
+            img={singleblog[0]?.image}
+            excerpt={singleblog[0]?.excerpt}
+            title={singleblog[0]?.title}
+            id={singleblog[0]?._id}
+          />
+ 
       </div>
+   
+        <div className="archives">
+          {remainingblog.map((v: any, k: any) => (
+            <ArchiveBox
+              key={k}
+              clss="arch-bx1"
+              img={v?.image}
+              excerpt={v?.excerpt}
+              title={v?.title.slice(0, 63)}
+              id={v?._id}
+            />
+          ))}
+        </div>
+
     </section>
   );
 };

@@ -20,7 +20,7 @@ export async function GET(req: NextRequest) {
     },
       'image': mainImage.asset->url,
       "slug": slug.current,
-      "excerpt": array::join(string::split((pt::text(body)), "")[0..500], "") + "...",
+      "excerpt": array::join(string::split((pt::text(body)), "")[0..100], "") + "...",
       }
       `
     );

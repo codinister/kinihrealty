@@ -11,23 +11,15 @@
       flex-grow: 0;
       flex-shrink: 0;
 
-          
-.default-nav{
-
-    width: 5rem!important; 
-    height: 5rem!important; 
-  
-}
+      .default-nav {
+        width: 5rem !important;
+        height: 5rem !important;
+      }
 
       & > div:nth-of-type(1) {
         padding: 3.2rem;
         box-shadow: 0.8rem 0.8rem 1.6rem rgba(0, 0, 0, 0.2);
         background-color: white;
-
-
-
-
-
 
         & > div:nth-of-type(2) {
           h3 {

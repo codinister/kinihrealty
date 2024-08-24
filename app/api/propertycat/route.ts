@@ -6,10 +6,6 @@ export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function GET(req: NextRequest) {
-
-
-
-
   try {
     const res = await client.fetch(
       groq`

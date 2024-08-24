@@ -17,7 +17,6 @@ export default function Home() {
   const sell = useGetQuery('sell', '/sell') || [];
   const buy = useGetQuery('buy', '/buy') || [];
   const featured = useGetQuery('featured', '/featured') || [];
-  const posts = useGetQuery('post', '/post') || [];
 
   return (
     <>
@@ -28,7 +27,7 @@ export default function Home() {
       <Houseforrent data={rent} />
       <Housetobuy data={buy} />
       <Newdevelopment data={newd} />
-      <Blog posts={posts} />
+      <Blog />
     </>
   );
 }
