@@ -96,7 +96,20 @@ export default defineType({
       title: "Tik Tok",
       type: "string", 
 
+    }), 
+    defineField({
+      name: "sbout", 
+      title: "About Us",
+      type: "text", 
+
+    }),     
+    defineField({
+      name: "whatsapp", 
+      title: "Whatsapp Message",
+      type: "text", 
+
     })
+
   ],
 
   preview: {

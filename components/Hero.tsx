@@ -47,7 +47,7 @@ const Hero = () => {
   //   return () => window.removeEventListener('resize', handleResize);
   // }, []);
 
-  const SLIDER_HEIGHT = 350;
+  const SLIDER_HEIGHT = 550;
 
   return (
     <div className="slide-container">

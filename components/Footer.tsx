@@ -1,93 +1,96 @@
 import useGetQuery from '@/data/query/useGetQuery';
+import { FloatingWhatsApp } from 'react-floating-whatsapp'
+import Whatsapp from './Whatsapp';
 
 const Footer = () => {
   const set = useGetQuery('settings', '/settings') || [];
-  const sell = useGetQuery('sell', '/sell') || [];
+
+
+  const post = useGetQuery('footerpost', '/post') || [];
+
+  console.log(set);
 
   return (
     <footer data-name="Kinih.Realty">
-      <div>
+        <Whatsapp />
+      <div className="container">
         <div>
+          <h5>About Us</h5>
+          <div>{set[0]?.sbout.slice(0,100)+'...'}</div>
+
           <div>
-            <div>
-              <span>
-                <i className="fa fa-phone"></i>
-              </span>
-              <span className="phone-bx">{set[0]?.phone1} </span>
-            </div>
-            <div>
-              <span>
-                <i className="fa fa-envelope"></i>
-              </span>
+            <a href={set[0]?.facebook} title="Facebook"  target="_blank" >
+              <i className="fa fa-facebook"></i>
+            </a>
+            <a href={set[0]?.tiktok} target="_blank" title="Tiktok">
+              <i className="fa fa-tiktok"></i>
+            </a>
+            <a href={set[0]?.twitter} target="_blank">
+              <i className="fa fa-twitter"></i>
+            </a>
+            <a href={set[0]?.instagram} target="_blank">
+              <i className="fa fa-instagram"></i>
+            </a>
+          </div>
+        </div>
 
-              <span className="email-bx">{set[0]?.email}</span>
-            </div>
-            <div>
-              <span>
-                <i className="fa fa-map-marker"></i>
-              </span>
+        <div>
+          <h5>Latest Blog Posts</h5>
 
-              <span>{set[0]?.comp_address}</span>
+          <div>
+            <div className="psbx">
+              <div
+                style={{
+                  backgroundImage: `url(${post[1]?.image})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'top',
+                }}
+              ></div>
+              <div>{post[1]?.title.slice(0, 40)+`...`}</div>
+            </div>
+            <div className="psbx">
+              <div
+                style={{
+                  backgroundImage: `url(${post[2]?.image})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'top',
+                }}
+              ></div>
+              <div>{post[2]?.title.slice(0, 40)+`...`}</div>
             </div>
           </div>
         </div>
+
         <div>
-          <div className="social-icons">
-            <ul>
-              <li>
-                <span>
-                  <i className="fa fa-facebook"></i>
-                </span>{' '}
-                <span>
-                  <a href={set[0]?.facebook} title="Facebook" target="_blank">
-                    Facebook
-                  </a>
-                </span>
-              </li>
-              <li>
-                <span>
-                  <i className="fa fa-twitter"></i>{' '}
-                </span>{' '}
-                <span>
-                  <a href={set[0]?.twitter} title="Twitter" target="_blank">
-                    Twitter
-                  </a>
-                </span>
-              </li>
-              <li>
-                <span>
-                  <i className="fa fa-instagram"></i>
-                </span>
-                <span>
-                  <a href={set[0]?.instagram} title="Instagram" target="_blank">
-                    Instagram
-                  </a>
-                </span>
-              </li>
-              <li>
-                <span>
-                  <i className=" fa  fa-tiktok"></i>
-                </span>
-                <span>
-                  <a href={set[0]?.tiktok} title="Tik Tok" target="_blank">
-                    Tik Tok
-                  </a>
-                </span>
-              </li>
-            </ul>
+          <h5>Get In Touch</h5>
+
+          <div className="contbx">
+            <span>
+              <i className="fa fa-map-marker"></i>
+            </span>
+            <span>{set[0]?.location}</span>
+          </div>
+
+          <div className="contbx">
+            <span>
+              <i className="fa fa-envelope"></i>
+            </span>
+            <span>{set[0]?.email}</span>
+          </div>
+
+          <div className="contbx">
+            <span>
+              <i className="fa fa-phone"></i>
+            </span>
+            <span>
+              {set[0]?.phone1} {set[0]?.phone2 ? '|' + set[0]?.phone2 : ''}
+            </span>
           </div>
         </div>
       </div>
-
-      <div>All rights reserved &copy; 2024 www.kinihrealty.com</div>
-
-      <div
-        style={{
-          backgroundImage: `URL(${sell[0]?.image})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      ></div>
+      <div className="container copyright">
+        <p>Copyright &copy;2024 All rights reserved </p>
+      </div>
     </footer>
   );
 };

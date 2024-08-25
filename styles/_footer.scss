@@ -1,171 +1,88 @@
 @media (min-width: 35em) {
   footer {
-    position: relative;
-    overflow: hidden;
+    background-color: #302f4e;
+    padding-block: 4rem;
 
-    &::before {
-      content: attr(data-name);
-      font-size: 15rem;
-      position: absolute;
 
-      left: 4%;
-
-      opacity: 0.2;
-      bottom: 10rem;
-    }
-
-    a{
-      color: white;
-    }
-
-    .fa {
-      display: block;
-      width: 3rem;
-      height: 3rem;
-      border-radius: 50%;
-      border: solid 0.1rem $light;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    & > div:nth-of-type(1) {
-      background-color: #333;
-      height: 30rem;
-      padding: 2rem;
-      display: flex;
-
-      color: $light;
-
-      flex-wrap: wrap;
-
-      & > div:nth-of-type(1) {
-        flex: 10rem 1 1;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        padding-block: 5.6rem;
-        & > div {
-          flex: 35rem 0 1;
-
-          & > div {
-            & > span {
-              display: block;
-              margin-bottom: 1.6rem;
-            }
-            display: flex;
-            gap: 1.6rem;
-          }
-        }
-      }
-
-      & > div:nth-of-type(2) {
-        flex: 40rem 1 1;
-        display: flex;
-        align-items: flex-start;
-        padding-block: 5.6rem;
-        justify-content: flex-start;
-        & > div {
-          flex: 20rem 0 1;
-          ul {
-            li {
-              margin-bottom: 1.6rem;
-              display: flex;
-              gap: 1.6rem;
-            }
-          }
-        }
-      }
-    }
-
-    & > div:nth-of-type(2) {
-      padding: 1rem;
-      text-align: center;
-      color: $dark;
-    }
-
-    & > div:nth-of-type(3) {
-      position: absolute;
-      width: 50rem;
-      height: 140%;
-      background-color: $light;
-      top: -5rem;
-      right: -12rem;
-      border-radius: 50%;
-      border: solid 0.8rem white;
-      box-shadow: -2rem -1rem 2rem rgba(0, 0, 0, 0.8);
-    }
-  }
+.copyright{
+  justify-content: center;
+  color: #b2b1c2;
 }
 
-@media (max-width: 35em) {
-  footer {
-    position: relative;
-    overflow: hidden;
-    background-color: #333;
-
-    color: $light;
-
-    .fa {
-      display: block;
-      width: 3rem;
-      height: 3rem;
-      border-radius: 50%;
-      border: solid 0.1rem $light;
+    & > div {
       display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    & > div:nth-of-type(1) {
-      padding: 2.4rem;
+      flex-wrap: wrap;
+      & > div {
+        flex: 10rem 1 1;
+        padding: 2.4rem;
+        h5 {
+          color: white;
+          font-size: 2rem;
+          margin-bottom: 2.4rem;
+        }
+      }
 
       & > div:nth-of-type(1) {
-        & > div {
-          flex: 35rem 0 1;
-
-          & > div {
-            & > span {
-              display: block;
-              margin-bottom: 1.6rem;
-            }
-            display: flex;
-            gap: 1.6rem;
-          }
+        & > div:nth-of-type(1) {
+          color: #b2b1c2;
+          margin-bottom: 2.4rem;
         }
-      }
-
-      & > div:nth-of-type(2) {
-        & > div {
-          flex: 20rem 0 1;
-          ul {
-            li {
-              margin-bottom: 1.6rem;
+        & > div:nth-of-type(2) {
+          display: flex;
+          justify-content: flex-start;
+          gap: 2.4rem;
+          & > a {
+            & > i {
+              color: white;
+              width: 3rem;
+              height: 3rem;
+              border-radius: 50%;
+              border: solid 0.1rem white;
               display: flex;
-              gap: 1.6rem;
+              justify-content: center;
+              align-items: center;
             }
           }
         }
       }
+      & > div:nth-of-type(2) {
+        & > div{
+          .psbx{
+            display: flex; 
+            gap: 2.4rem; 
+            margin-bottom: 2.4rem;
+            & > div:nth-of-type(1){
+              flex-basis: 5rem; 
+              flex-grow: 0;
+            }
+            & > div:nth-of-type(2){
+              flex-basis: 5rem; 
+              flex-grow: 1;
+              color: white;
+            }
+          }
+        }
+      }
+      & > div:nth-of-type(3) {
+        
+          .contbx{
+            display: flex; 
+            gap: 1.6rem; 
+            margin-bottom: 1.2rem;
+            & > span:nth-of-type(1){
+              flex-basis: 2rem;
+              flex-grow: 0;
+              color: white; 
+            }
+            & > span:nth-of-type(2){
+              flex-basis: 3rem;
+              flex-grow: 1;
+              color: #b2b1c2; 
+            }
+          
+        }
+      }
     }
 
-    & > div:nth-of-type(2) {
-      padding: 1rem;
-      text-align: center;
-      color: $dark;
-      background-color: white;
-    }
-
-    & > div:nth-of-type(3) {
-      position: absolute;
-      width: 20rem;
-      height: 20rem;
-
-      bottom: 5rem;
-      right: -6rem;
-      border-radius: 50%;
-      border: solid 0.8rem white;
-      box-shadow: -0.5rem -0.5rem 2rem rgba(0, 0, 0, 0.2);
-    }
   }
 }
