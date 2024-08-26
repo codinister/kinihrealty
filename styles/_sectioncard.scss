@@ -1,49 +1,39 @@
+@media (min-width: 35em) {
 
-@media(min-width: 35em){  
+  .section-card {
+    padding-inline: 5.6rem;
+    padding-top: 5rem;
+    padding-bottom: 6rem;
 
+    h3 {
+      text-align: center;
+      color: $dark;
+      font-weight: bold;
+      margin-bottom: 4rem;
+    }
 
-.section-card {
-  padding-inline: 5.6rem;
-  padding-top: 5rem;
-  padding-bottom: 6rem;
-
-  h3 {
-    font-size: 1.6rem;
-    color: $dark;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 1.4rem;
-  }
-
-  & > div {
-    display: flex;
-    gap: 2.4rem;
-    flex-wrap: wrap;
-    justify-content: center;
     & > div {
-      flex-basis: 21rem;
-      flex-grow: 0;
+      display: flex;
+      gap: 2.4rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      & > div {
+        flex-basis: 28rem;
+        flex-grow: 0;
+        a:hover{
+          text-decoration: none!important;
+        }
+      }
     }
   }
 }
 
-}
-
-
-
-
-
-
-
-@media(max-width: 35em){  
-
-
+@media (max-width: 35em) {
   .section-card {
     padding-inline: 5rem;
     padding-top: 5rem;
     padding-bottom: 6rem;
 
-  
     h3 {
       font-size: 2rem;
       color: $dark;
@@ -51,9 +41,5 @@
       text-transform: uppercase;
       margin-bottom: 3.2rem;
     }
-  
-
   }
-  
-  }
-  
+}

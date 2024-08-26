@@ -7,7 +7,7 @@ type DT = {
 
 const Houseforsale = ({ data }: DT) => {
   return (
-    <div className="propertiesforsale">
+    <div >
       <Sectioncard title="House for sale" sub_title="" data={data} />
     </div>
   );

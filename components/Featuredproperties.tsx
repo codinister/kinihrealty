@@ -10,8 +10,6 @@ const Featuredproperties = ({ data }: DT) => {
   const featured = useGetQuery('featured', '/featured') || [];
   const arr = featured.slice(0, 12);
 
-  console.log(arr);
-
   const remaining = featured.slice(1, featured.length);
 
   return (
@@ -72,9 +70,11 @@ const Featuredproperties = ({ data }: DT) => {
               </div>
             </div>
           </div>
+
           <div></div>
         </div>
       </section>
+
       <Sectioncard title="Featured properties" sub_title="" data={arr} />
     </div>
   );

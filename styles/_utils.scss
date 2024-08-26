@@ -1,169 +1,96 @@
-@media(min-width: 35em){  
-
-
-.container {
-  margin-inline: 5.6rem;
-}
-
-.propertiesforsale {
-  background: linear-gradient(to bottom, $light, white);
-
-}
-
-.default-nav {
-  height: 1.3rem !important;
-  width: 1.3rem !important;
-  margin: 2rem !important;
-  background-color: white !important;
-}
-
-.slidecard {
-  .react-slideshow-wrapper {
-    width: 23rem !important;
-    height: 10rem;
+@media (min-width: 35em) {
+  .container {
+    margin-inline: 5.6rem;
   }
 
-  .scard {
-    background-color: white;
-    padding: 1.6rem;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-
-    & > div:nth-of-type(1){
-
-      box-shadow: .6rem .6rem 1.2rem rgba(0, 0, 0, 0.5) inset;
-    
-    
-      
-    }
-
-    & > div:nth-of-type(2) {
-      & > a:hover {
-        text-decoration: underline;
-      }
-      h6 {
-        color: $dark;
-        font-weight: 900;
-        margin-top: 1rem;
-      }
-    }
-  }
-}
-
-.each-slide-effect{
-  box-shadow: .6rem .6rem 1.2rem rgba(0, 0, 0, 0.3) inset;
-}
-
-.form {
-  button {
-    background-color: $dark;
-    color: white;
-    padding: 1rem;
-    display: block;
-    width: 27.4rem;
-    margin-top: 1rem;
-    border-radius: 1.2rem;
-    cursor: pointer;
+  .propertiesforsale {
+    background: linear-gradient(to bottom, $light, white);
   }
 
-  h4 {
-    margin-bottom: 3.2rem;
-    border-bottom: 0.1rem solid $dark;
-    padding-bottom: 0.8rem;
-    color: $dark;
-    text-align: center;
-  }
-}
-
-.form-control {
-  position: relative;
-
-  input {
-    padding: 1.2rem;
-    outline: none;
-    border: solid 0.1rem #888;
-    border-radius: 0.5rem;
-    width: 25rem;
-
+  .default-nav {
+    height: 1.3rem !important;
+    width: 1.3rem !important;
+    margin: 2rem !important;
+    background-color: white !important;
   }
 
-  select {
-    padding: 1.2rem;
-    outline: none;
-    border: solid 0.1rem #888;
-    border-radius: 0.5rem;
-    width: 27rem;
-
-  }
-
-  textarea {
-    padding: 1.2rem;
-    outline: none;
-    border: solid 0.1rem #888;
-    border-radius: 0.5rem;
-    width: 25rem;
-  }
-  margin-bottom: 2.4rem;
-
-  label {
-    position: absolute;
-    top: 0.8rem;
-    left: 1rem;
-    font-size: 1.4rem;
-    color: #666;
-    transition: .3s;
-    pointer-events: none;
-  }
-
-  input:focus + label{
-    top: -2rem; 
-    font-size: 1rem;
-    color: #000;
-  }
-
-  input:not(:placeholder-shown) + label{
-    top: -2rem; 
-    font-size: 1rem;
-    color: #000;
-  }
-}
-
-}
-
-
-
-
-@media(max-width: 35em){
   .slidecard {
     .react-slideshow-wrapper {
-      width: 23rem !important;
-      height: 10rem;
+      width: 28rem !important;
+      height: 20rem;
     }
-  
+
     .scard {
       background-color: white;
       padding: 1.6rem;
       box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-      margin-bottom: 2.4rem;
-  
-      & > div:nth-of-type(1){
-        box-shadow: .6rem .6rem 1.2rem rgba(0, 0, 0, 0.5) inset;
+
+      & > div:nth-of-type(1) {
+        box-shadow: 0.6rem 0.6rem 1.2rem rgba(0, 0, 0, 0.5) inset;
       }
-  
+
       & > div:nth-of-type(2) {
-        & > a:hover {
-          text-decoration: underline;
-        }
-        h6 {
-          color: $dark;
-          font-weight: 900;
-          margin-top: 1rem;
+        .prop-box {
+          color: #666;
+
+          & > h4 {
+            font-size: 2rem;
+            padding-block: 1.6rem;
+          }
+
+          & > div:nth-of-type(1) {
+            display: flex;
+            gap: 1.2rem;
+            flex-wrap: wrap; 
+            .fa-map-marker{
+              font-size: 2.4rem;
+            }
+          }
+          & > div:nth-of-type(2) {
+            display: flex;
+            flex-wrap: wrap;
+            margin-block: 2.4rem;
+            &  >  div:nth-of-type(1){
+              flex-basis: 40%; 
+              flex-grow: 0;
+            }
+            &  >  div:nth-of-type(2){
+              flex-basis: 20%; 
+              flex-grow: 0;
+            }
+            &  >  div:nth-of-type(3){
+              flex-basis: 20%; 
+              flex-grow: 0;
+            }
+            &  >  div:nth-of-type(4){
+              flex-basis: 20%; 
+              flex-grow: 0;
+            }
+            .fa{
+              font-size: 2.4rem;
+            }
+          }
+          & > div:nth-of-type(3) {
+            display: flex; 
+            flex-wrap: wrap; 
+            & > span{
+              flex: 5rem 1 1;
+            }
+            & > span:nth-of-type(1){
+              font-size: 1.5rem;
+            }
+            & > span:nth-of-type(2){
+              flex: 5rem 1 1;
+            }
+          }
         }
       }
     }
   }
-  
 
-
+  .each-slide-effect {
+    box-shadow: 0.6rem 0.6rem 1.2rem rgba(0, 0, 0, 0.3) inset;
+  }
 
   .form {
     button {
@@ -176,7 +103,7 @@
       border-radius: 1.2rem;
       cursor: pointer;
     }
-  
+
     h4 {
       margin-bottom: 3.2rem;
       border-bottom: 0.1rem solid $dark;
@@ -185,28 +112,26 @@
       text-align: center;
     }
   }
-  
+
   .form-control {
     position: relative;
-  
+
     input {
       padding: 1.2rem;
       outline: none;
       border: solid 0.1rem #888;
       border-radius: 0.5rem;
       width: 25rem;
-  
     }
-  
+
     select {
       padding: 1.2rem;
       outline: none;
       border: solid 0.1rem #888;
       border-radius: 0.5rem;
       width: 27rem;
-  
     }
-  
+
     textarea {
       padding: 1.2rem;
       outline: none;
@@ -215,25 +140,128 @@
       width: 25rem;
     }
     margin-bottom: 2.4rem;
-  
+
     label {
       position: absolute;
       top: 0.8rem;
       left: 1rem;
       font-size: 1.4rem;
       color: #666;
-      transition: .3s;
+      transition: 0.3s;
       pointer-events: none;
     }
-  
-    input:focus + label{
-      top: -2rem; 
+
+    input:focus + label {
+      top: -2rem;
       font-size: 1rem;
       color: #000;
     }
-  
-    input:not(:placeholder-shown) + label{
-      top: -2rem; 
+
+    input:not(:placeholder-shown) + label {
+      top: -2rem;
+      font-size: 1rem;
+      color: #000;
+    }
+  }
+}
+
+@media (max-width: 35em) {
+  .slidecard {
+    .react-slideshow-wrapper {
+      width: 23rem !important;
+      height: 10rem;
+    }
+
+    .scard {
+      background-color: white;
+      padding: 1.6rem;
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+      margin-bottom: 2.4rem;
+
+      & > div:nth-of-type(1) {
+        box-shadow: 0.6rem 0.6rem 1.2rem rgba(0, 0, 0, 0.5) inset;
+      }
+
+      & > div:nth-of-type(2) {
+        & > a:hover {
+          text-decoration: underline;
+        }
+        h6 {
+          color: $dark;
+          font-weight: 900;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+
+  .form {
+    button {
+      background-color: $dark;
+      color: white;
+      padding: 1rem;
+      display: block;
+      width: 27.4rem;
+      margin-top: 1rem;
+      border-radius: 1.2rem;
+      cursor: pointer;
+    }
+
+    h4 {
+      margin-bottom: 3.2rem;
+      border-bottom: 0.1rem solid $dark;
+      padding-bottom: 0.8rem;
+      color: $dark;
+      text-align: center;
+    }
+  }
+
+  .form-control {
+    position: relative;
+
+    input {
+      padding: 1.2rem;
+      outline: none;
+      border: solid 0.1rem #888;
+      border-radius: 0.5rem;
+      width: 25rem;
+    }
+
+    select {
+      padding: 1.2rem;
+      outline: none;
+      border: solid 0.1rem #888;
+      border-radius: 0.5rem;
+      width: 27rem;
+    }
+
+    textarea {
+      padding: 1.2rem;
+      outline: none;
+      border: solid 0.1rem #888;
+      border-radius: 0.5rem;
+      width: 25rem;
+    }
+    margin-bottom: 2.4rem;
+
+    label {
+      position: absolute;
+      top: 0.8rem;
+      left: 1rem;
+      font-size: 1.4rem;
+      color: #666;
+      transition: 0.3s;
+      pointer-events: none;
+    }
+
+    input:focus + label {
+      top: -2rem;
+      font-size: 1rem;
+      color: #000;
+    }
+
+    input:not(:placeholder-shown) + label {
+      top: -2rem;
       font-size: 1rem;
       color: #000;
     }

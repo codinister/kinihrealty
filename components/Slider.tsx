@@ -41,7 +41,7 @@ const Slider = ({ data, width, height }: DT) => {
           style={{
             backgroundImage: `url(${fadeImage?.url})`,
             backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundPosition: 'top',
             height,
             width,
           }}

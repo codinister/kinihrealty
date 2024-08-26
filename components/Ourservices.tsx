@@ -7,8 +7,6 @@ import Link from 'next/link';
 const Ourservices = () => {
   const set = useGetQuery('abtset', '/settings') || [];
 
-  console.log(set);
-
   return (
     <div className="ourservices">
       <div className="container">
