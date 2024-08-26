@@ -3,10 +3,15 @@ export type DATATYPE = {
   cat: string[];
   excerpt: any;
   gallery: string[];
-  id: string; 
-  image: string; 
+  id: string;
+  image: string;
   price: string;
   title: string;
-  type: string; 
+  type: string;
   youtube: string;
-}
+  lot: string;
+  beds: string;
+  baths: string;
+  garage: string;
+  location: string;
+};

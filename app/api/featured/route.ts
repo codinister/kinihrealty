@@ -27,7 +27,13 @@ export async function GET(req: NextRequest) {
             "category": category[]->title,
             "gallery": gallery[]{
             "image": asset->url
-            }
+            },
+            lot,
+            beds,
+            baths,
+            garage,
+            location,
+            proptype
       }
       `
     );

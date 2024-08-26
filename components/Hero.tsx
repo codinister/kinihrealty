@@ -6,13 +6,8 @@ import Searchbox from './Searchbox';
 import { DATATYPE } from '@/types/types';
 import useGetQuery from '@/data/query/useGetQuery';
 
-
 const Hero = () => {
-
-
-  const data  = useGetQuery('slider', '/slider') || []
-
-
+  const data = useGetQuery('slider', '/slider') || [];
 
   const images = [
     {

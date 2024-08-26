@@ -11,9 +11,6 @@ const Ourservices = () => {
 
   return (
     <div className="ourservices">
-
-
-
       <div className="container">
         <div>
           <div>
@@ -36,15 +33,12 @@ const Ourservices = () => {
         <h3>Our Solutions</h3>
 
         <div>
-
-          
           <div>
             <Link href="/buy">
               <i className="fa fa-id-card"></i>
               <h4>Buy</h4>
             </Link>
           </div>
-
 
           <div>
             <Link href="/sell">
@@ -53,7 +47,6 @@ const Ourservices = () => {
             </Link>
           </div>
 
-
           <div>
             <Link href="/srent">
               <i className="fa fa-institution"></i>
@@ -61,21 +54,14 @@ const Ourservices = () => {
             </Link>
           </div>
 
-
           <div>
             <Link href="/new">
               <i className="fa fa-home"></i>
               <h4>New Development </h4>
             </Link>
           </div>
-
-
         </div>
-
       </div>
-
-
-
     </div>
   );
 };

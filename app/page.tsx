@@ -23,6 +23,8 @@ export default function Home() {
       <Hero />
       <Ourservices />
       <Featuredproperties data={featured} />
+
+      
       <Houseforsale data={sell} />
       <Houseforrent data={rent} />
       <Housetobuy data={buy} />

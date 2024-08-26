@@ -18,8 +18,6 @@ export default defineType({
       type: 'string',
     }),
 
-   
-
     defineField({
       name: 'img',
       title: 'Thumbnail',
@@ -34,7 +32,6 @@ export default defineType({
       title: 'Short Description',
       type: 'text',
     }),
-
 
     defineField({
       name: 'body',
@@ -72,6 +69,32 @@ export default defineType({
       options: {
         layout: 'grid',
       },
+    }),
+
+    defineField({
+      name: 'lot',
+      title: 'Lot Size',
+      type: 'string',
+    }),
+    defineField({
+      name: 'beds',
+      title: 'Beds',
+      type: 'string',
+    }),
+    defineField({
+      name: 'baths',
+      title: 'Baths',
+      type: 'string',
+    }),
+    defineField({
+      name: 'garage',
+      title: 'Garage',
+      type: 'string',
+    }),
+    defineField({
+      name: 'location',
+      title: 'Location',
+      type: 'string',
     }),
   ],
 

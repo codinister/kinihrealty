@@ -73,6 +73,45 @@ export default defineType({
         layout: 'grid',
       },
     }),
+    {
+      title: "Type of property",
+      description: "Select Type",
+      name: "proptype",
+      type: "string",
+      options: {
+        list: [
+          { title: "Rent", value: "Rent" },
+          { title: "Buy", value: "Buy" },
+          { title: "Sale", value: "Sale" },
+        ],
+      },
+      validation: (Rule) => Rule.required(),
+    }, 
+    defineField({
+      name: 'lot',
+      title: 'Lot Size',
+      type: 'string'
+    }),
+    defineField({
+      name: 'beds',
+      title: 'Beds',
+      type: 'string'
+    }),
+    defineField({
+      name: 'baths',
+      title: 'Baths',
+      type: 'string'
+    }),
+    defineField({
+      name: 'garage',
+      title: 'Garage',
+      type: 'string'
+    }),
+    defineField({
+      name: 'location',
+      title: 'Location',
+      type: 'string'
+    })
   ],
 
   preview: {

@@ -18,7 +18,6 @@ export default defineType({
       type: 'string',
     }),
 
-
     defineField({
       name: 'img',
       title: 'Thumbnail',
@@ -33,7 +32,6 @@ export default defineType({
       title: 'Short Description',
       type: 'text',
     }),
-
 
     defineField({
       name: 'body',
@@ -54,26 +52,31 @@ export default defineType({
       of: [{ type: 'reference', to: { type: 'category' } }],
     }),
 
-
-    defineField(
-      {
-        title: "Currency",
-        description: "Select a currency",
-        name: "currency",
-        type: "string",
-        options: {
-          list: [
-            { title: "Cedi", value: "GH₵" },
-            { title: "Dollar", value: "$" },
-            { title: "Euro", value: "€" },
-            { title: "Pound", value: "£" },
-          ],
-        },
-        validation: (Rule) => Rule.required(),
-      }
-    )
-
-
+    defineField({
+      name: 'lot',
+      title: 'Lot Size',
+      type: 'string',
+    }),
+    defineField({
+      name: 'beds',
+      title: 'Beds',
+      type: 'string',
+    }),
+    defineField({
+      name: 'baths',
+      title: 'Baths',
+      type: 'string',
+    }),
+    defineField({
+      name: 'garage',
+      title: 'Garage',
+      type: 'string',
+    }),
+    defineField({
+      name: 'location',
+      title: 'Location',
+      type: 'string',
+    }),
   ],
 
   preview: {
