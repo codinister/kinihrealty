@@ -9,6 +9,7 @@ import Houseforrent from '@/components/Houseforrent';
 import Housetobuy from '@/components/Housetobuy';
 import Newdevelopment from '@/components/Newdevelopment';
 import useGetQuery from '@/data/query/useGetQuery';
+import Contactsection from '@/components/Contactsection';
 
 export default function Home() {
   
@@ -27,6 +28,7 @@ export default function Home() {
       <Houseforrent data={rent} />
       <Housetobuy data={buy} />
       <Newdevelopment data={newd} />
+      <Contactsection />
       <Blog />
     </>
   );
