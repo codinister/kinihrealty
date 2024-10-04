@@ -1,7 +1,7 @@
 'use client';
 
 import Footer from '@/components/Footer';
-import Nav from '@/components/Nav';
+
 import type { Metadata } from 'next';
 import './globals.scss';
 import { Suspense } from 'react';
@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <QueryClientProvider client={provider}>
-          <Nav />
+
           <Suspense>{children}</Suspense>
           <Footer />
         </QueryClientProvider>

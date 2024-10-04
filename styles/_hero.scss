@@ -5,6 +5,45 @@
     .default-nav {
       display: none !important;
     }
+
+    & > nav {
+      position: absolute;
+      top: 5rem;
+      width: 100%;
+      left: 0;
+      z-index: 99;
+
+      & > div {
+        div {
+          & > div:nth-of-type(2) {
+            & > a {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+    .nav-top-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 99;
+      padding-block: 1.6rem;
+      border-bottom: solid .1rem #ccc;
+
+      .container {
+        .contactdetails {
+          color: white;
+        }
+
+        .social-media-icons {
+          a {
+            color: white;
+          }
+        }
+      }
+    }
   }
 
   .hero {

@@ -7,18 +7,71 @@
   .logo {
     border-radius: 1.5rem;
   }
-  nav {
 
-    box-shadow: 0 0 2rem rgba(9, 0, 0, 0.4);
+  .is-sticky {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+    box-shadow: 0 2px 24px 0 rgb(0 0 0 / 15%);
+    background-color: #ffffff !important;
+    animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+
+    & > div {
+      div {
+        & > div:nth-of-type(2) {
+          & > a {
+            color: #777 !important;
+          }
+        }
+      }
+    }
+  }
+
+  .nav-top-bar {
+    .container {
+      display: flex;
+      justify-content: space-between;
+
+      .contactdetails {
+        flex-basis: 40rem;
+        flex-grow: 0;
+        display: flex;
+        gap: 2.4rem;
+
+        & > div {
+          flex: 20rem 1 1;
+
+          & > div {
+            display: flex;
+            gap: 1.6rem;
+            color: #777;
+          }
+        }
+      }
+    
+      .social-media-icons {
+        display: flex;
+        gap: 1.6rem;
+        justify-content: flex-end;
+        flex-basis: 15rem;
+        flex-grow: 0;
+        a {
+          color: #777;
+        }
+      }
+    }
+  }
+
+  nav {
     padding-block: 1rem;
 
     div {
-      justify-content: center;
-
       div {
         display: flex;
-        gap: 7.2rem;
-
+        gap: 2.4rem;
+        justify-content: space-between;
         & > div {
           flex-grow: 1;
           flex-shrink: 1;
@@ -31,33 +84,37 @@
         }
 
         & > div:nth-of-type(2) {
-          flex-basis: 50rem;
           display: flex;
           align-items: center;
           gap: 1.6rem;
           font-weight: bold;
 
           & > a {
-            color: $medium;
             position: relative;
             display: block;
-            padding: 1.6rem;
-            width: max-content;
-            text-align: center;
-            transition: 0.5s;
-            text-align: center;
+            text-transform: uppercase;
+            &:last-child {
+              background-color: #ff7b31;
+              color: white !important;
+              padding-inline: 2.4rem;
+              padding-block: 1.6rem;
+              padding: 0.8rem;
+              border-radius: 5rem;
+              &:hover {
+                border-bottom: transparent;
+              }
+              & > .active {
+                border-bottom: 0.3rem transparent solid;
+              }
+            }
           }
 
           & > a:hover {
-            box-shadow: 0.4rem 0.4rem 0.1rem rgba(9, 0, 0, 0.1);
-            border-radius: 2.4rem;
-            color: $dark;
+            border-bottom: 0.3rem #ff7b31 solid;
           }
 
           .active {
-            box-shadow: 0.4rem 0.4rem 0.1rem rgba(9, 0, 0, 0.1);
-            color: $dark;
-            border-radius: 2.4rem;
+            border-bottom: 0.3rem #ff7b31 solid;
           }
         }
       }
@@ -65,18 +122,7 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
 @media (max-width: 35em) {
-
-
   .showname {
     left: 0;
   }
@@ -98,12 +144,9 @@
     flex-direction: column;
     gap: 0.5rem;
     margin: 1.6rem;
-
   }
 
-
   nav {
-
     transition: 0.2s;
     height: 100vh;
     position: fixed;
@@ -112,12 +155,6 @@
     width: 100%;
     z-index: 999999;
     box-shadow: 0 0 2rem rgba(9, 0, 0, 0.4);
-   
-
-
-
-
-
 
     & > div:nth-of-type(1) {
       height: 100vh;
@@ -125,23 +162,19 @@
       background-color: white;
       padding: 1.4em;
       & > div:nth-of-type(1) {
-
-
-        & > div:nth-of-type(1){
+        & > div:nth-of-type(1) {
           img {
             height: 8rem;
             border-radius: 2rem;
           }
         }
 
-
-  
-        & > div:nth-of-type(2){
-         a{
-          display: block; 
-          font-size: 1.6rem; 
-          margin-bottom: 1.6rem;
-         }
+        & > div:nth-of-type(2) {
+          a {
+            display: block;
+            font-size: 1.6rem;
+            margin-bottom: 1.6rem;
+          }
         }
       }
     }

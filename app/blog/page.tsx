@@ -1,6 +1,7 @@
 'use client';
 
 import { ArchiveBox, ArchiveImageBox } from '@/components/ArchiveBox';
+import Nav from '@/components/Nav';
 import Topstories from '@/components/Topstories';
 import useGetQuery from '@/data/query/useGetQuery';
 
@@ -14,6 +15,7 @@ const Archive = () => {
 
   return (
     <section>
+          <Nav />
       <Topstories />
 
       <div className="large-arch-img">

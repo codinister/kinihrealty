@@ -5,6 +5,7 @@ import 'react-slideshow-image/dist/styles.css';
 import Searchbox from './Searchbox';
 import { DATATYPE } from '@/types/types';
 import useGetQuery from '@/data/query/useGetQuery';
+import Nav from './Nav';
 
 const Hero = () => {
   const data = useGetQuery('slider', '/slider') || [];
@@ -46,9 +47,13 @@ const Hero = () => {
 
   return (
     <div className="slide-container">
-      <div className="search-box">
-        <span>Rent, Sell, Buy, New development</span>
 
+
+      <Nav />
+
+
+      <div className="search-box">
+        <span>Rent, Sell, New development</span>
         <Searchbox />
       </div>
 

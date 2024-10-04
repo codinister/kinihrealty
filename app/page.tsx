@@ -26,7 +26,6 @@ export default function Home() {
       <Featuredproperties data={featured} />
       <Houseforsale data={sell} />
       <Houseforrent data={rent} />
-      <Housetobuy data={buy} />
       <Newdevelopment data={newd} />
       <Contactsection />
       <Blog />

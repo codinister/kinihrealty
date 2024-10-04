@@ -2,6 +2,7 @@
 
 import Houseforsale from '@/components/Houseforsale';
 import Modal from '@/components/Modal';
+import Nav from '@/components/Nav';
 import SalesForm from '@/components/SalesForm';
 import useGetQuery from '@/data/query/useGetQuery';
 import usePagecat from '@/utils/usePagecat';
@@ -17,6 +18,7 @@ const Sell = () => {
 
   return (
     <>
+    <Nav />
       <div className="sell">
         <div className="hero">
           <div>

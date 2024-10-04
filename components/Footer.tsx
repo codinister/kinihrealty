@@ -5,10 +5,7 @@ import Whatsapp from './Whatsapp';
 const Footer = () => {
   const set = useGetQuery('settings', '/settings') || [];
 
-
   const post = useGetQuery('footerpost', '/post') || [];
-
-  console.log(set);
 
   return (
     <footer data-name="Kinih.Realty">

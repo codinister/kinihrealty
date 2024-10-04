@@ -3,9 +3,8 @@
 import Sidebarpostcardlg from '@/components/blog/Sidebarpostcardlg';
 import Sidebarpostcardsm from '@/components/blog/Sidebarpostcardsm';
 import Bodycontent from '@/components/Bodycontent';
+import Nav from '@/components/Nav';
 import useGetQuery from '@/data/query/useGetQuery';
-
-
 
 const Singlepage = ({ params }: { params: { id: string } }) => {
   const { id } = params;
@@ -20,26 +19,30 @@ const Singlepage = ({ params }: { params: { id: string } }) => {
   const remaining = arrs;
 
   return (
-    <section className="singlepage">
-      <div className="container">
-        <div>
-          <div
-            style={{
-              backgroundImage: `url(${obj?.image})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
-          ></div>
-          <h2>{obj?.title}</h2>
+    <>
+      <Nav />
 
-          <Bodycontent body={obj?.body} />
+      <section className="singlepage">
+        <div className="container">
+          <div>
+            <div
+              style={{
+                backgroundImage: `url(${obj?.image})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
+            ></div>
+            <h2>{obj?.title}</h2>
+
+            <Bodycontent body={obj?.body} />
+          </div>
+          <div>
+            <Sidebarpostcardlg data={first} />
+            <Sidebarpostcardsm data={remaining} />
+          </div>
         </div>
-        <div>
-          <Sidebarpostcardlg data={first} />
-          <Sidebarpostcardsm data={remaining} />
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

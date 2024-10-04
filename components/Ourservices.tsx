@@ -31,12 +31,7 @@ const Ourservices = () => {
         <h3>Our Solutions</h3>
 
         <div>
-          <div>
-            <Link href="/buy">
-              <i className="fa fa-id-card"></i>
-              <h4>Buy</h4>
-            </Link>
-          </div>
+ 
 
           <div>
             <Link href="/sell">
