@@ -9,7 +9,6 @@ const Footer = () => {
 
   return (
     <footer data-name="Kinih.Realty">
-      TIKTOK
         <Whatsapp />
       <div className="container">
         <div>
