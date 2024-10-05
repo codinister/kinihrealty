@@ -27,8 +27,8 @@ export default function RootLayout({
         <QueryClientProvider client={provider}>
           <Suspense>{children}</Suspense>
           <Footer />
-
-          <Script id="8486412078120474" strategy="afterInteractive">
+          
+          <Script id="1253179435823295" strategy="afterInteractive">
             {`
           !function(f,b,e,v,n,t,s)
           {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
