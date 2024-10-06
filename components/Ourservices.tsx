@@ -39,7 +39,7 @@ const Ourservices = () => {
           </div>
 
           <div>
-            <Link href="/srent">
+            <Link href="/rent">
               <i className="fa fa-institution"></i>
               <h4>Rent</h4>
             </Link>

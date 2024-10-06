@@ -10,6 +10,7 @@ import { useState } from 'react';
 import BlockContent from '@sanity/block-content-to-react';
 import Noslider from '@/components/Noslider';
 import Slider from '@/components/Slider';
+import Nav from '@/components/Nav';
 
 const Propertydetails = () => {
   const [state, setState] = useState(false);
@@ -55,6 +56,7 @@ const Propertydetails = () => {
 
   return (
     <>
+    <Nav />
       <div className="propertydetails">
 
         

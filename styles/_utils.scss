@@ -41,8 +41,8 @@
           & > div:nth-of-type(1) {
             display: flex;
             gap: 1.2rem;
-            flex-wrap: wrap; 
-            .fa-map-marker{
+            flex-wrap: wrap;
+            .fa-map-marker {
               font-size: 2.4rem;
             }
           }
@@ -50,36 +50,36 @@
             display: flex;
             flex-wrap: wrap;
             margin-block: 2.4rem;
-            &  >  div:nth-of-type(1){
-              flex-basis: 40%; 
+            & > div:nth-of-type(1) {
+              flex-basis: 40%;
               flex-grow: 0;
             }
-            &  >  div:nth-of-type(2){
-              flex-basis: 20%; 
+            & > div:nth-of-type(2) {
+              flex-basis: 20%;
               flex-grow: 0;
             }
-            &  >  div:nth-of-type(3){
-              flex-basis: 20%; 
+            & > div:nth-of-type(3) {
+              flex-basis: 20%;
               flex-grow: 0;
             }
-            &  >  div:nth-of-type(4){
-              flex-basis: 20%; 
+            & > div:nth-of-type(4) {
+              flex-basis: 20%;
               flex-grow: 0;
             }
-            .fa{
+            .fa {
               font-size: 2.4rem;
             }
           }
           & > div:nth-of-type(3) {
-            display: flex; 
-            flex-wrap: wrap; 
-            & > span{
+            display: flex;
+            flex-wrap: wrap;
+            & > span {
               flex: 5rem 1 1;
             }
-            & > span:nth-of-type(1){
+            & > span:nth-of-type(1) {
               font-size: 1.5rem;
             }
-            & > span:nth-of-type(2){
+            & > span:nth-of-type(2) {
               flex: 5rem 1 1;
             }
           }
@@ -165,39 +165,7 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 35em) {
-
-
   .propertiesforsale {
     background: linear-gradient(to bottom, $light, white);
   }
@@ -236,8 +204,8 @@
           & > div:nth-of-type(1) {
             display: flex;
             gap: 1.2rem;
-            flex-wrap: wrap; 
-            .fa-map-marker{
+            flex-wrap: wrap;
+            .fa-map-marker {
               font-size: 2.4rem;
             }
           }
@@ -245,36 +213,36 @@
             display: flex;
             flex-wrap: wrap;
             margin-block: 2.4rem;
-            &  >  div:nth-of-type(1){
-              flex-basis: 40%; 
+            & > div:nth-of-type(1) {
+              flex-basis: 40%;
               flex-grow: 0;
             }
-            &  >  div:nth-of-type(2){
-              flex-basis: 20%; 
+            & > div:nth-of-type(2) {
+              flex-basis: 20%;
               flex-grow: 0;
             }
-            &  >  div:nth-of-type(3){
-              flex-basis: 20%; 
+            & > div:nth-of-type(3) {
+              flex-basis: 20%;
               flex-grow: 0;
             }
-            &  >  div:nth-of-type(4){
-              flex-basis: 20%; 
+            & > div:nth-of-type(4) {
+              flex-basis: 20%;
               flex-grow: 0;
             }
-            .fa{
+            .fa {
               font-size: 2.4rem;
             }
           }
           & > div:nth-of-type(3) {
-            display: flex; 
-            flex-wrap: wrap; 
-            & > span{
+            display: flex;
+            flex-wrap: wrap;
+            & > span {
               flex: 5rem 1 1;
             }
-            & > span:nth-of-type(1){
+            & > span:nth-of-type(1) {
               font-size: 1.5rem;
             }
-            & > span:nth-of-type(2){
+            & > span:nth-of-type(2) {
               flex: 5rem 1 1;
             }
           }

@@ -65,7 +65,7 @@ const Featuredproperties = ({ data }: DT) => {
                 </span>
                 <span>BEST DEAL</span>
                 <span>
-                  <Link href="">View Property</Link>
+                  <Link href={`/propertydetails?query=${arr[0]?.id}`}>View Property</Link>
                 </span>
               </div>
             </div>

@@ -15,34 +15,31 @@ const Archive = () => {
 
   return (
     <section>
-          <Nav />
+      <Nav />
       <Topstories />
 
       <div className="large-arch-img">
-
-          <ArchiveImageBox
-            clss="arch-bx2"
-            img={singleblog[0]?.image}
-            excerpt={singleblog[0]?.excerpt}
-            title={singleblog[0]?.title}
-            id={singleblog[0]?._id}
-          />
- 
+        <ArchiveImageBox
+          clss="arch-bx2"
+          img={singleblog[0]?.image}
+          excerpt={singleblog[0]?.excerpt}
+          title={singleblog[0]?.title}
+          id={singleblog[0]?._id}
+        />
       </div>
-   
-        <div className="archives">
-          {remainingblog.map((v: any, k: any) => (
-            <ArchiveBox
-              key={k}
-              clss="arch-bx1"
-              img={v?.image}
-              excerpt={v?.excerpt}
-              title={v?.title.slice(0, 63)}
-              id={v?._id}
-            />
-          ))}
-        </div>
 
+      <div className="archives">
+        {remainingblog.map((v: any, k: any) => (
+          <ArchiveBox
+            key={k}
+            clss="arch-bx1"
+            img={v?.image}
+            excerpt={v?.excerpt}
+            title={v?.title.slice(0, 63)}
+            id={v?._id}
+          />
+        ))}
+      </div>
     </section>
   );
 };
