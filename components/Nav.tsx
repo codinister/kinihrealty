@@ -20,7 +20,7 @@ const Nav = () => {
 
   /* Method that will fix header after a specific scrollable */
   const isSticky = (e: any) => {
-    const header = document.querySelector('.nar');
+    const header = document.querySelector('.navbar');
     const scrollTop = window.scrollY;
     scrollTop >= 150
       ? header?.classList.add('is-sticky')
@@ -28,7 +28,7 @@ const Nav = () => {
   };
 
   return (
-    <div className="navbar-wrapper">
+    <>
       <Navtopbar cls="nav-top-bar" />
 
       <nav className="navbar">
@@ -105,7 +105,7 @@ const Nav = () => {
           onClick={() => setOpenbox(false)}
         ></div>
       </nav>
-    </div>
+    </>
   );
 };
 

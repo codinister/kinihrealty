@@ -46,7 +46,7 @@ const Hero = () => {
   const SLIDER_HEIGHT = 550;
 
   return (
-    <>
+    <div className="slide-container">
 
       <Nav />
 
@@ -74,7 +74,7 @@ const Hero = () => {
           ></div>
         ))}
       </Slide>
-    </>
+    </div>
   );
 };
 
