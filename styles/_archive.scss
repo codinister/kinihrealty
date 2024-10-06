@@ -1,23 +1,54 @@
-.top-stories {
-  .container {
+@media (min-width: 35em) {
+  .top-stories {
+    .container {
+      display: flex;
+      gap: 2.4rem;
+      padding-top: 5.6rem;
+
+      & > div:nth-of-type(1) {
+        flex-basis: 25%;
+        flex-grow: 1;
+      }
+      & > div:nth-of-type(2) {
+        flex-basis: 50%;
+        flex-grow: 1;
+      }
+      & > div:nth-of-type(3) {
+        flex-basis: 25%;
+        flex-grow: 1;
+      }
+      .archbx {
+        .arch-bx1 {
+          height: 15rem;
+          border-radius: 1.6rem;
+          margin-bottom: 1.6rem;
+        }
+        h4 {
+          margin-bottom: 1.6rem;
+        }
+      }
+      .arch-bx3,
+      .arch-bx4 {
+        height: 13rem;
+        border-radius: 1.6rem;
+        margin-bottom: 1.6rem;
+      }
+    }
+  }
+
+  .archives {
     display: flex;
     gap: 2.4rem;
-    padding-top: 5.6rem;
-
-    & > div:nth-of-type(1) {
-      flex-basis: 25%;
-      flex-grow: 1;
-    }
-    & > div:nth-of-type(2) {
-      flex-basis: 50%;
-      flex-grow: 1;
-    }
-    & > div:nth-of-type(3) {
-      flex-basis: 25%;
-      flex-grow: 1;
-    }
-     .archbx {
-      .arch-bx1 {
+    flex-wrap: wrap;
+    margin-block: 5.6rem;
+    justify-content: center;
+    padding-inline: 5.6rem;
+    & > a {
+      display: block;
+      flex-basis: 20rem;
+      flex-grow: 0;
+      height: 40rem;
+      & > div > div {
         height: 15rem;
         border-radius: 1.6rem;
         margin-bottom: 1.6rem;
@@ -26,122 +57,44 @@
         margin-bottom: 1.6rem;
       }
     }
-    .arch-bx3,
-    .arch-bx4 {
-      height: 13rem;
-      border-radius: 1.6rem;
-      margin-bottom: 1.6rem;
-    }
-  }
-}
-
-.archives {
-  display: flex;
-  gap: 2.4rem;
-  flex-wrap: wrap;
-  margin-block: 5.6rem;
-  justify-content: center;
-  padding-inline: 5.6rem;
-  & > a  {
-    display: block;
-    flex-basis: 20rem;
-    flex-grow: 0;
-    height: 40rem;
-    & > div > div {
-      height: 15rem;
-      border-radius: 1.6rem;
-      margin-bottom: 1.6rem;
-    }
-    h4 {
-      margin-bottom: 1.6rem;
-    }
-  }
-}
-
-.large-arch-img {
-  padding-inline: 5.6rem;
-  margin-top: 5.6rem;
-}
-
-.arch-bx2 {
-  height: 35rem;
-  border-radius: 2.4rem;
-  position: relative;
-  z-index: -2;
-  padding: 2.4rem;
-  display: flex;
-  align-items: flex-end;
-
-  color: white;
-
-  & > div {
-    h3 {
-      margin-bottom: 1.6rem;
-      line-height: 3.2rem;
-    }
   }
 
-  &::before {
-    content: '';
-    display: block;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.3);
+  .large-arch-img {
+    padding-inline: 5.6rem;
+    margin-top: 5.6rem;
+  }
+
+  .arch-bx2 {
+    height: 35rem;
     border-radius: 2.4rem;
-    inset: 0;
-    z-index: -1;
+    position: relative;
+    z-index: -2;
+    padding: 2.4rem;
+    display: flex;
+    align-items: flex-end;
+
+    color: white;
+
+    & > div {
+      h3 {
+        margin-bottom: 1.6rem;
+        line-height: 3.2rem;
+      }
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 2.4rem;
+      inset: 0;
+      z-index: -1;
+    }
   }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   .singlepage {
     padding: 4rem 0 6.4rem 0;
-
 
     & > div {
       display: flex;
@@ -170,13 +123,13 @@
 
   .sidebarpostcardsm {
     cursor: pointer;
-    border-radius: 1.6rem; 
+    border-radius: 1.6rem;
     overflow: hidden;
     display: flex;
     box-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.2);
     height: 13rem;
     margin-top: 2.4rem;
-    
+
     & > div:nth-of-type(1) {
       flex: 10rem 1 0;
     }
@@ -184,11 +137,10 @@
       flex: 20rem 1 0;
       background-color: white;
       padding: 1.6rem;
-      & > span{
+      & > span {
         font-size: 1rem;
-        display: block; 
-        border-bottom: .1rem solid #ccc;
-   
+        display: block;
+        border-bottom: 0.1rem solid #ccc;
       }
     }
   }
@@ -214,6 +166,7 @@
       margin-bottom: 1rem;
     }
   }
+}
 
 
 
@@ -234,4 +187,162 @@
 
 
 
+
+
+
+@media (max-width: 35em) {
+  .top-stories {
+    .container {
+   padding: 1.6rem;
+      .archbx {
+        .arch-bx1 {
+          height: 15rem;
+          border-radius: 1.6rem;
+          margin-bottom: 1.6rem;
+        }
+        h4 {
+          margin-bottom: 1.6rem;
+        }
+        margin-bottom: 2.4rem;
+      }
+      .arch-bx3,
+      .arch-bx4 {
+        height: 13rem;
+        border-radius: 1.6rem;
+        margin-bottom: 2.4rem;
+      }
+    }
+  }
+
+  .archives {
+    display: flex;
+    gap: 2.4rem;
+    flex-wrap: wrap;
+    margin-block: 5.6rem;
+    justify-content: center;
+    padding-inline: 5.6rem;
+    & > a {
+      display: block;
+      flex-basis: 20rem;
+      flex-grow: 0;
+      height: 40rem;
+      & > div > div {
+        height: 15rem;
+        border-radius: 1.6rem;
+        margin-bottom: 1.6rem;
+      }
+      h4 {
+        margin-bottom: 1.6rem;
+      }
+    }
+  }
+
+  .large-arch-img {
+    padding-inline: 5.6rem;
+    margin-top: 5.6rem;
+  }
+
+  .arch-bx2 {
+    height: 35rem;
+    border-radius: 2.4rem;
+    position: relative;
+    z-index: -2;
+    padding: 2.4rem;
+    display: flex;
+    align-items: center;
+margin-bottom: 2.4rem;
+    color: white;
+
+    & > div {
+      h3 {
+        margin-bottom: 1.6rem;
+        line-height: 3.2rem;
+      }
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 2.4rem;
+      inset: 0;
+      z-index: -1;
+    }
+  }
+
+  .singlepage {
+    padding: 4rem 0 6.4rem 0;
+
+    & > div {
+      display: flex;
+      flex-wrap: wrap;
+
+      & > div:nth-of-type(1) {
+        flex: 60rem 1 1;
+        background-color: white;
+        padding: 2.4rem;
+        h2 {
+          margin-bottom: 1.6rem;
+          line-height: 4rem;
+        }
+        & > div:nth-of-type(1) {
+          height: 40rem;
+          margin-bottom: 4rem;
+        }
+      }
+      & > div:nth-of-type(2) {
+        flex: 20rem 1 1;
+        background-color: white;
+        padding: 2.4rem;
+      }
+    }
+  }
+
+  .sidebarpostcardsm {
+    cursor: pointer;
+    border-radius: 1.6rem;
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.2);
+    height: 13rem;
+    margin-top: 2.4rem;
+
+    & > div:nth-of-type(1) {
+      flex: 10rem 1 0;
+    }
+    & > div:nth-of-type(2) {
+      flex: 20rem 1 0;
+      background-color: white;
+      padding: 1.6rem;
+      & > span {
+        font-size: 1rem;
+        display: block;
+        border-bottom: 0.1rem solid #ccc;
+      }
+    }
+  }
+
+  .sidebarpostcardlg {
+    cursor: pointer;
+    height: 20rem;
+    padding: 2.4rem;
+    position: relative;
+    z-index: 1;
+    color: white;
+    border-radius: 1.6rem;
+    overflow: hidden;
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+    }
+
+    h5 {
+      margin-bottom: 1rem;
+    }
+  }
+}
 

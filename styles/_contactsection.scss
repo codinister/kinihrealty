@@ -88,29 +88,26 @@
   }
 }
 
-
-
-
 @media (max-width: 35em) {
   .contactsection {
-    padding-block: 6.4rem;
+    padding: 1.6rem;
 
     & > div {
-
       & > div:nth-of-type(1) {
- 
-
         & > div {
           & > h1 {
             color: #999;
             margin-bottom: 2.4rem;
+            line-height: 4rem;
           }
           & > h4 {
             color: #ccc;
           }
         }
       }
+
       & > div:nth-of-type(2) {
+        margin-top: 4rem;
         h4 {
           margin-bottom: 1.6rem;
           color: #999;
@@ -126,7 +123,6 @@
         }
 
         .button-bx {
-    
           button {
             outline: none;
             border: 0;
@@ -139,16 +135,15 @@
         }
 
         .contbx {
-
-
           input {
             background-color: #f2f2f2;
             border: none;
             outline: none;
             padding: 1.2rem;
+            width: 92%;
           }
           textarea {
-            width: 100%;
+            width: 82%;
           }
         }
       }
@@ -159,7 +154,7 @@
 
     .message-sent {
       padding: 2.4rem;
- 
+
       h2 {
         font-size: 2.4rem;
         color: rgb(56, 166, 56) !important;
