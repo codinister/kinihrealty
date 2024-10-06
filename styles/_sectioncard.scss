@@ -1,5 +1,4 @@
 @media (min-width: 35em) {
-
   .section-card {
     padding-inline: 5.6rem;
     padding-top: 5rem;
@@ -20,8 +19,8 @@
       & > div {
         flex-basis: 28rem;
         flex-grow: 0;
-        a:hover{
-          text-decoration: none!important;
+        a:hover {
+          text-decoration: none !important;
         }
       }
     }
@@ -30,16 +29,30 @@
 
 @media (max-width: 35em) {
   .section-card {
-    padding-inline: 5rem;
+    padding-inline: 1.6rem;
     padding-top: 5rem;
     padding-bottom: 6rem;
 
     h3 {
-      font-size: 2rem;
+      text-align: center;
       color: $dark;
       font-weight: bold;
-      text-transform: uppercase;
-      margin-bottom: 3.2rem;
+      margin-bottom: 4rem;
+    }
+
+    & > div {
+      display: flex;
+      gap: 2.4rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      & > div {
+        a {
+          color: #777;
+        }
+        a:hover {
+          text-decoration: none !important;
+        }
+      }
     }
   }
 }

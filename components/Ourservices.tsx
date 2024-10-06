@@ -9,8 +9,6 @@ const Ourservices = () => {
 
   return (
     <div className="ourservices">
-
-
       <div className="container">
         <div>
           <div>
@@ -29,18 +27,10 @@ const Ourservices = () => {
         </div>
       </div>
 
-
-
-
-
-
-
       <div className="container">
         <h3>Our Solutions</h3>
 
         <div>
- 
-
           <div>
             <Link href="/sell">
               <i className="fa fa-building"></i>
@@ -63,10 +53,6 @@ const Ourservices = () => {
           </div>
         </div>
       </div>
-
-
-
-
     </div>
   );
 };

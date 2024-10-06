@@ -1,92 +1,172 @@
-.contactsection {
-  padding-block: 6.4rem;
+@media (min-width: 35em) {
+  .contactsection {
+    padding-block: 6.4rem;
 
-  & > div {
-    display: flex;
-    flex-wrap: wrap;
     & > div {
-      flex: 10rem 1 1;
+      display: flex;
+      flex-wrap: wrap;
+      & > div {
+        flex: 10rem 1 1;
+      }
+      & > div:nth-of-type(1) {
+        display: flex;
+        align-items: center;
+
+        & > div {
+          & > h1 {
+            color: #999;
+            margin-bottom: 2.4rem;
+          }
+          & > h4 {
+            color: #ccc;
+          }
+        }
+      }
+      & > div:nth-of-type(2) {
+        h4 {
+          margin-bottom: 1.6rem;
+          color: #999;
+        }
+
+        textarea {
+          background-color: #f2f2f2;
+          width: 94%;
+          height: 15rem;
+          border: 0;
+          outline: none;
+          padding: 1.6rem;
+        }
+
+        .button-bx {
+          display: flex;
+          justify-content: flex-end;
+
+          button {
+            outline: none;
+            border: 0;
+            padding: 1.6rem;
+            background-color: #302f4e;
+            color: white;
+            margin-top: 2.4rem;
+            cursor: pointer;
+          }
+        }
+
+        .contbx {
+          display: flex;
+          gap: 2.4rem;
+
+          input {
+            background-color: #f2f2f2;
+            border: none;
+            outline: none;
+            padding: 1.2rem;
+          }
+          textarea {
+            width: 100%;
+          }
+        }
+      }
     }
-    & > div:nth-of-type(1) {
+    .errors {
+      color: red;
+    }
+
+    .message-sent {
+      padding: 2.4rem;
       display: flex;
       align-items: center;
+      justify-content: center;
+      h2 {
+        font-size: 2.4rem;
+        color: rgb(56, 166, 56) !important;
+      }
 
-      & > div{
-        & > h1 {
+      box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.2);
+      height: 30rem;
+    }
+  }
+}
+
+
+
+
+@media (max-width: 35em) {
+  .contactsection {
+    padding-block: 6.4rem;
+
+    & > div {
+
+      & > div:nth-of-type(1) {
+ 
+
+        & > div {
+          & > h1 {
+            color: #999;
+            margin-bottom: 2.4rem;
+          }
+          & > h4 {
+            color: #ccc;
+          }
+        }
+      }
+      & > div:nth-of-type(2) {
+        h4 {
+          margin-bottom: 1.6rem;
           color: #999;
-          margin-bottom: 2.4rem;
-        }
-        & > h4 {
-          color:#ccc;
-        }
-      }
-
-    }
-    & > div:nth-of-type(2) {
-      h4 {
-        margin-bottom: 1.6rem;
-        color: #999;
-      }
-
-      textarea {
-        background-color: #f2f2f2;
-        width: 94%;
-        height: 15rem;
-        border: 0;
-        outline: none;
-        padding: 1.6rem;
-      }
-
-      .button-bx{
-
-        display: flex; 
-        justify-content: flex-end;
-
-        button{
-          outline: none; 
-          border: 0; 
-          padding: 1.6rem; 
-          background-color: #302f4e;
-          color: white;
-          margin-top: 2.4rem;
-          cursor: pointer;
         }
 
-      }
-
-
-      .contbx {
-        display: flex;
-        gap: 2.4rem;
-
-        input {
-          background-color: #f2f2f2;
-          border: none;
-          outline: none;
-          padding: 1.2rem;
-        }
         textarea {
-          width: 100%;
+          background-color: #f2f2f2;
+          width: 94%;
+          height: 15rem;
+          border: 0;
+          outline: none;
+          padding: 1.6rem;
+        }
+
+        .button-bx {
+    
+          button {
+            outline: none;
+            border: 0;
+            padding: 1.6rem;
+            background-color: #302f4e;
+            color: white;
+            margin-top: 2.4rem;
+            cursor: pointer;
+          }
+        }
+
+        .contbx {
+
+
+          input {
+            background-color: #f2f2f2;
+            border: none;
+            outline: none;
+            padding: 1.2rem;
+          }
+          textarea {
+            width: 100%;
+          }
         }
       }
     }
+    .errors {
+      color: red;
+    }
+
+    .message-sent {
+      padding: 2.4rem;
+ 
+      h2 {
+        font-size: 2.4rem;
+        color: rgb(56, 166, 56) !important;
+      }
+
+      box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.2);
+      height: 30rem;
+    }
   }
-.errors{
-  color: red;
-}
-
-.message-sent{
-  padding: 2.4rem; 
-  display: flex; 
-  align-items: center;
-  justify-content: center;
-  h2{
-    font-size: 2.4rem;
-    color: rgb(56, 166, 56)!important;
-  }
-
-  box-shadow: 1rem 1rem 3rem rgba(0,0,0, .2);
-  height: 30rem;
-}
-
 }
