@@ -26,7 +26,6 @@ const SalesForm = () => {
             <label htmlFor="">Property location</label>
           </div>
 
-
           <div className="form-control">
             <input type="number" placeholder="" />
             <label htmlFor="">Numbeer of bedroom(s)</label>
@@ -37,16 +36,16 @@ const SalesForm = () => {
             <label htmlFor="">Numbeer of bathroom(s)</label>
           </div>
 
-          
           <div className="form-control">
             <input type="number" placeholder="" />
             <label htmlFor="">Numbeer of kitchen</label>
           </div>
 
           <div className="form-control">
-     
             <select name="" id="">
-              <option value="" hidden>Choose property type</option>
+              <option value="" hidden>
+                Choose property type
+              </option>
               <option value="Apartment"> Apartment</option>
               <option value="House"> House </option>
               <option value="Duplex"> Duplex</option>
@@ -57,10 +56,6 @@ const SalesForm = () => {
               <option value="Pent House"> Pent House</option>
             </select>
           </div>
-
-
-
-
 
           <button> Request a tour </button>
         </form>

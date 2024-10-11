@@ -9,7 +9,7 @@ export async function GET(req: NextRequest) {
   try {
     const res = await client.fetch(
       groq`
-      *[_type in ['new','rent','sell','featured'] ]{
+      *[_type in ['new','rent','buy','featured'] ]{
             "id": _id,
             "type": _type,
             title,

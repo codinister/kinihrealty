@@ -67,9 +67,6 @@ const Contactsection = () => {
 
   return (
     <section className="contactsection">
-
-
-      
       <div className="container">
         <div>
           <div>
@@ -78,6 +75,10 @@ const Contactsection = () => {
           </div>
         </div>
         <div>
+
+        
+        
+
           <form onSubmit={handleSubmit(handleForm)}>
             {formTitle}
             <div className="contbx">

@@ -73,6 +73,17 @@ const Nav = () => {
               >
                 Sell
               </Link>
+
+              <Link
+                href="/buy"
+                onClick={() => setOpenbox(false)}
+                className={path === '/buy' ? 'active' : ''}
+              >
+                Buy
+              </Link>
+
+
+
               <Link
                 href="/rent"
                 onClick={() => setOpenbox(false)}

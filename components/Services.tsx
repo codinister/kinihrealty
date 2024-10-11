@@ -6,9 +6,10 @@ const Services = () => {
   const newprop = useGetQuery('new', '/new') || [];
   const rent = useGetQuery('rent', '/rent') || [];
   const sell = useGetQuery('sell', '/sell') || [];
+  const buy = useGetQuery('buy', '/buy') || [];
 
 
-  const obj = [newprop[0], rent[0], sell[0]];
+  const obj = [newprop[0], rent[0], sell[0], buy[0]];
 
   return (
     <>
@@ -29,7 +30,7 @@ const Services = () => {
                 ? 'Rent a home'
                 : v?.type === 'new'
                   ? 'New properties'
-                  : ''}
+                  : 'buy'}
           </div>
         </Link>
       ))}

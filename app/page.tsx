@@ -24,7 +24,9 @@ export default function Home() {
       <Hero />
       <Ourservices />
       <Featuredproperties data={featured} />
-      <Houseforsale data={sell} />
+ 
+
+      <Housetobuy  data={buy} />
       <Houseforrent data={rent} />
       <Newdevelopment data={newd} />
       <Contactsection />
