@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type Noslidertype = {
   height: string;
   width: string;
@@ -6,15 +8,17 @@ type Noslidertype = {
 
 const Noslider = ({ height, width, url }: Noslidertype) => {
   return (
-    <div
+    <Link href={url}
       style={{
+        display: 'block',
         backgroundImage: `url(${url})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height,
         width,
-      }}
-    ></div>
+      }}>
+    
+    </Link>
   );
 };
 
