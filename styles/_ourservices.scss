@@ -1,8 +1,29 @@
 @media (min-width: 35em) {
   .ourservices {
-    padding-block: 5.6rem;
+    padding-bottom: 5.6rem;
+
     & > div:nth-of-type(1) {
+      border-top: solid 0.5rem #ff7b31;
+      & > div {
+        background-color: #ff7b31;
+        width: max-content;
+        border-bottom-left-radius: 1.4rem;
+        border-bottom-right-radius: 1.4rem;
+        color: white;
+        padding-block: 0.8rem;
+        padding-inline: 1.6rem;
+        margin-inline: auto;
+        font-size: 2.4rem;
+        cursor: pointer;
+      }
+    }
+
+    & > .about-bx.show {
       display: flex;
+    }
+
+    & > .about-bx {
+      display: none;
       flex-wrap: wrap;
       gap: 3.2rem;
       & > div {
@@ -51,7 +72,7 @@
       }
     }
 
-    & > div:nth-of-type(2) {
+    & > div:nth-of-type(3) {
       & > h3 {
         text-align: center;
         margin-top: 5.6rem;
@@ -66,31 +87,35 @@
 
         & > div {
           flex: 10rem 1 1;
-          display: flex;
-          justify-content: center;
+          padding: 1.6rem;
+          box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.1);
+
           a {
-            color: #777;
+            position: relative;
+
+            &:hover {
+              display: block;
+
+              & > div {
+                border-color: #ff7b31;
+              }
+              & > h4 {
+                color: #ff7b31;
+              }
+            }
           }
 
-          i {
-            width: 15rem;
-            height: 15rem;
-            background-color: #302f4e;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 6.4rem;
-            border-radius: 50%;
-            margin: 1.6rem;
-            border: solid 1rem white;
-            box-shadow: 0 0 0 1rem #302f4e;
+          .serv-img-bx {
+            height: 20rem;
+            border-radius: 2dvh;
+            border: solid 1rem #302f4e;
           }
           h4 {
             font-size: 2.4rem;
             font-weight: bold;
             text-align: center;
-            margin-top: 2.4rem;
+            margin-top: 1.6rem;
+            color: #302f4e;
           }
         }
       }
@@ -130,7 +155,6 @@
 
           & > a {
             i {
-         
               height: 11rem;
 
               background-color: #302f4e;

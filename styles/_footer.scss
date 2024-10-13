@@ -89,15 +89,15 @@
     padding-block: 4rem;
 
     .copyright {
-      justify-content: center;
+      display: flex;
+      justify-content: flex-start;
       color: #b2b1c2;
+      padding-left: 1.6rem;
     }
 
     & > div {
-      display: flex;
-      flex-wrap: wrap;
+  
       & > div {
-        flex: 10rem 1 1;
         padding: 2.4rem;
         h5 {
           color: white;
@@ -132,6 +132,7 @@
       & > div:nth-of-type(2) {
         & > div {
           .psbx {
+  
             display: flex;
             gap: 2.4rem;
             margin-bottom: 2.4rem;

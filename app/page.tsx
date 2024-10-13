@@ -12,7 +12,6 @@ import useGetQuery from '@/data/query/useGetQuery';
 import Contactsection from '@/components/Contactsection';
 
 export default function Home() {
-  
   const newd = useGetQuery('new', '/new') || [];
   const rent = useGetQuery('rent', '/rent') || [];
   const sell = useGetQuery('sell', '/sell') || [];
@@ -22,11 +21,9 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Ourservices />
+      <Ourservices buy={buy} newd={newd} rent={rent} sell={sell} />
       <Featuredproperties data={featured} />
- 
-
-      <Housetobuy  data={buy} />
+      <Housetobuy data={buy} />
       <Houseforrent data={rent} />
       <Newdevelopment data={newd} />
       <Contactsection />
