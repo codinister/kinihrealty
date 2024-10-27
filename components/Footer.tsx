@@ -1,6 +1,6 @@
 import useGetQuery from '@/data/query/useGetQuery';
-import { FloatingWhatsApp } from 'react-floating-whatsapp'
 import Whatsapp from './Whatsapp';
+
 
 const Footer = () => {
   const set = useGetQuery('settings', '/settings') || [];
@@ -8,6 +8,7 @@ const Footer = () => {
   const post = useGetQuery('footerpost', '/post') || [];
 
   return (
+    <>
     <footer data-name="Kinih.Realty">
         <Whatsapp />
       <div className="container">
@@ -89,6 +90,8 @@ const Footer = () => {
         <p>Copyright &copy;2024 All rights reserved </p>
       </div>
     </footer>
+
+    </>
   );
 };
 
