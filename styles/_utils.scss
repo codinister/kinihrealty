@@ -38,8 +38,10 @@
       & > .prod-details {
         box-shadow: 0.6rem 0.6rem 1.2rem rgba(0, 0, 0, 0.5) inset;
         &:hover{
-          background-color: black;
-          color: white;
+      
+           h4{
+            color: #ff7a30!important;
+          }
         }
 
         & > .propbox {

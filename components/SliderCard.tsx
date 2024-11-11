@@ -36,7 +36,7 @@ const SliderCard = ({ singleimage, gallery }: VAL) => {
             alignment: 'left', // alignment of buttons (left, center, right)
             color: 'social', // set the color of buttons (social, white)
             enabled: true, // show/hide buttons (true, false)
-            font_size: 16, // font size for the buttons
+            font_size: 12, // font size for the buttons
             labels: 'cta', // button labels (cta, counts, null)
             language: 'en', // which language to use (see LANGUAGES)
             networks: [
@@ -78,25 +78,40 @@ const SliderCard = ({ singleimage, gallery }: VAL) => {
           </div>
 
           <div>
-            <div>
-              <h5>Log Size</h5>
-              <i className="fa fa-building"></i> {singleimage?.lot}
-            </div>
+            {Number(singleimage?.lot) > 0 ? (
+              <div>
+                <h5>Log Size</h5>
+                <i className="fa fa-building"></i> {singleimage?.lot}
+              </div>
+            ) : (
+              ''
+            )}
 
-            <div>
-              <h5>Beds</h5>
-              <i className="fa fa-bed"></i> {singleimage?.beds}
-            </div>
+            {Number(singleimage?.beds) > 0 ? (
+              <div>
+                <h5>Beds</h5>
+                <i className="fa fa-bed"></i> {singleimage?.beds}
+              </div>
+            ) : (
+              ''
+            )}
+            {Number(singleimage?.baths) > 0 ? (
+              <div>
+                <h5>Baths</h5>
+                <i className="fa fa-bath"></i> {singleimage?.baths}
+              </div>
+            ) : (
+              ''
+            )}
 
-            <div>
-              <h5>Baths</h5>
-              <i className="fa fa-bath"></i> {singleimage?.baths}
-            </div>
-
-            <div>
-              <h5>Garage</h5>
-              <i className="fa fa-car"></i> {singleimage?.garage}
-            </div>
+            {Number(singleimage?.garage) > 0 ? (
+              <div>
+                <h5>Garage</h5>
+                <i className="fa fa-car"></i> {singleimage?.garage}
+              </div>
+            ) : (
+              ''
+            )}
           </div>
 
           <div>

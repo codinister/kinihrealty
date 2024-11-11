@@ -36,6 +36,7 @@ const Noslider = ({ height, width, url }: Noslidertype) => {
           backgroundPosition: 'center',
           height,
           width,
+          cursor: 'pointer'
         }}
       ></div>
       {showModal ? (
