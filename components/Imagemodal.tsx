@@ -9,7 +9,7 @@ type getimgsType = {
 
 const Imagemodal = ({ img, setShowModal }: getimgsType) => {
   const [windstate, setWindstate] = useState(false);
-  const r = useRef()
+  const url = useRef<any>();
 
   useEffect(() => {
     if (typeof window === 'object') {
@@ -23,21 +23,26 @@ const Imagemodal = ({ img, setShowModal }: getimgsType) => {
     document.body.style.overflow = 'scroll';
   };
 
-
-
   const currentImage = img[0]?.url;
   const otherImages = img.slice(1, img.length);
+  const [getImage,setImage] = useState(currentImage)
 
-
-
-  const [getImage, setImage] = useState(currentImage);
+  // const setImage = (e: any) => {
+  //   e.preventDefault();
+  //   if (url?.current) {
+  //     console.log(url?.current.dataset);
+  //   }
+  // };
 
   return windstate ? (
     createPortal(
-      <div className="imagemodal" onClick={handleClick}>
+      <div className="imagemodalwrapper">
+        <div className="imagemodal" onClick={handleClick}></div>
         <div className="imagemodal-inner">
           <div>
-            <Image src={getImage} alt="" width="700" height="1000" />
+            <a href={getImage}>
+              <Image src={getImage} alt="" width="600" height="450" />
+              </a>
           </div>
 
           <div>

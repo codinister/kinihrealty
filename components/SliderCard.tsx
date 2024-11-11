@@ -2,6 +2,7 @@ import { DATATYPE } from '@/types/types';
 import Link from 'next/link';
 import Slider from './Slider';
 import Noslider from './Noslider';
+import { InlineShareButtons } from 'sharethis-reactjs';
 
 type VAL = {
   singleimage: DATATYPE;
@@ -29,50 +30,82 @@ const SliderCard = ({ singleimage, gallery }: VAL) => {
     <div className="scard">
       {image}
 
-      <div>
-        <Link href={`/propertydetails?query=${singleimage?.id}`}>
-          <div className="prop-box">
-            <h4>{tit}</h4>
+      <div className="sharebtns">
+        <InlineShareButtons
+          config={{
+            alignment: 'left', // alignment of buttons (left, center, right)
+            color: 'social', // set the color of buttons (social, white)
+            enabled: true, // show/hide buttons (true, false)
+            font_size: 16, // font size for the buttons
+            labels: 'cta', // button labels (cta, counts, null)
+            language: 'en', // which language to use (see LANGUAGES)
+            networks: [
+              // which networks to include (see SHARING NETWORKS)
+              'whatsapp',
+              'linkedin',
+              'twitter',
+            ],
+            padding: 3, // padding within buttons (INTEGER)
+            radius: 20, // the corner radius on each button (INTEGER)
+            show_total: false,
+            size: 30, // the size of each button (INTEGER)
 
-            <div>
-              <span>
-                <i className="fa fa-map-marker"></i>
-              </span>{' '}
-              <span> {singleimage?.location}</span>
-            </div>
+            // OPTIONAL PARAMETERS
 
-            <div>
-              <div>
-                <h5>Log Size</h5>
-                <i className="fa fa-building"></i> {singleimage?.lot}
-              </div>
-
-              <div>
-                <h5>Beds</h5>
-                <i className="fa fa-bed"></i> {singleimage?.beds}
-              </div>
-
-              <div>
-                <h5>Baths</h5>
-                <i className="fa fa-bath"></i> {singleimage?.baths}
-              </div>
-
-              <div>
-                <h5>Garage</h5>
-                <i className="fa fa-car"></i> {singleimage?.garage}
-              </div>
-            </div>
-
-          
-              <div>
-                <span>
-                  <h4> {singleimage?.price}</h4>
-                </span>
-              </div>
-            
-          </div>
-        </Link>
+            url: `https://www.kinihrealty.com/propertydetails?query=${singleimage?.id}`, // (defaults to current url)
+            image: 'https://bit.ly/2CMhCMC', // (defaults to og:image or twitter:image)
+            description: 'custom text', // (defaults to og:description or twitter:description)
+            title: tit, // (defaults to og:title or twitter:title)
+            message: singleimage?.location, // (only for email sharing)
+            subject: 'Property for sale/rent', // (only for email sharing)
+            username: 'kinihrealty', // (only for twitter sharing)
+          }}
+        />
       </div>
+
+      <Link
+        className="prod-details"
+        href={`/propertydetails?query=${singleimage?.id}`}
+      >
+        <div className="propbox">
+          <h4>{tit}</h4>
+
+          <div>
+            <span>
+              <i className="fa fa-map-marker"></i>
+            </span>
+            <span> {singleimage?.location}</span>
+          </div>
+
+          <div>
+            <div>
+              <h5>Log Size</h5>
+              <i className="fa fa-building"></i> {singleimage?.lot}
+            </div>
+
+            <div>
+              <h5>Beds</h5>
+              <i className="fa fa-bed"></i> {singleimage?.beds}
+            </div>
+
+            <div>
+              <h5>Baths</h5>
+              <i className="fa fa-bath"></i> {singleimage?.baths}
+            </div>
+
+            <div>
+              <h5>Garage</h5>
+              <i className="fa fa-car"></i> {singleimage?.garage}
+            </div>
+          </div>
+
+          <div>
+            <span>
+              <h4> {singleimage?.price}</h4>
+            </span>
+          </div>
+        </div>
+      </Link>
     </div>
   );
 };

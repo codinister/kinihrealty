@@ -56,6 +56,7 @@ const Slider = ({ data, width, height }: DT) => {
               backgroundImage: `url(${fadeImage?.url})`,
               backgroundSize: 'cover',
               backgroundPosition: 'top',
+              cursor: 'pointer',
               height,
               width,
             }}
