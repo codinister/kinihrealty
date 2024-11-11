@@ -1,0 +1,37 @@
+.imagemodal {
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.imagemodal-inner {
+  background-color: white;
+  padding: 4rem;
+  width: 70rem;
+  height: auto;
+  margin-top: 14rem;
+
+  & > div:nth-of-type(1) {
+    width: 100%;
+    min-height: 20rem;
+    margin-bottom: 4rem;
+  }
+
+  & > div:nth-of-type(2) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    & > div{
+      flex: 7rem 1 1;
+    }
+  }
+}

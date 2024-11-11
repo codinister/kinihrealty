@@ -9,11 +9,9 @@ type DT = {
   width: string;
 };
 
-
 type getimgsType = {
-  url: string
-}[]
-
+  url: string;
+}[];
 
 const Slider = ({ data, width, height }: DT) => {
   // const images = [
@@ -29,6 +27,7 @@ const Slider = ({ data, width, height }: DT) => {
   // ]
 
   const [getimgs, setImgs] = useState<getimgsType>();
+  const [showModal,setShowModal] = useState(false)
 
   const images = Object.values(data).map((v: any, k) => {
     return {
@@ -37,11 +36,9 @@ const Slider = ({ data, width, height }: DT) => {
   });
 
   const Handleclick = () => {
-
     setImgs(images);
+    setShowModal(true)
   };
-
-
 
   return (
     <>
@@ -66,7 +63,7 @@ const Slider = ({ data, width, height }: DT) => {
         ))}
       </Slide>
 
-      <Imagemodal img={getimgs} />
+      {showModal ? (<Imagemodal img={getimgs} setShowModal={setShowModal} />) : ''}
     </>
   );
 };
