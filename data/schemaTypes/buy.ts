@@ -19,6 +19,12 @@ export default defineType({
     }),
 
     defineField({
+      name: 'tcount',
+      title: 'Count',
+      type: 'number',
+    }),
+
+    defineField({
       name: 'img',
       title: 'Thumbnail',
       type: 'image',

@@ -11,6 +11,8 @@ import BlockContent from '@sanity/block-content-to-react';
 import Noslider from '@/components/Noslider';
 import Slider from '@/components/Slider';
 import Nav from '@/components/Nav';
+import { useEffect } from 'react';
+import client from '@/data/client';
 
 const Propertydetails = () => {
   const [state, setState] = useState(false);
@@ -25,6 +27,7 @@ const Propertydetails = () => {
   const item = data.filter((v: any) => v.id === id);
 
   //BEGIN ITEM LIST
+
   const title = item[0]?.title;
   const cat = item[0]?.cat;
   const price = item[0]?.price;
@@ -33,8 +36,22 @@ const Propertydetails = () => {
   const excerpt = item[0]?.excerpt;
   const body = item[0]?.body;
   const gallery = item[0]?.gallery;
-
   const youtube = item[0]?.youtube;
+  const ids = item[0]?.id;
+  let count = Number(item[0]?.tcount) + 1;
+
+
+  useEffect(() => {
+    client
+      .patch(ids)
+      .set({
+        tcount: count 
+      })
+      .commit()
+      .then((data) => {
+        console.log(data);
+      });
+  }, [ids, type, count]);
 
   //BEGIN OTHER LIST
   const other = data.filter(
@@ -56,10 +73,8 @@ const Propertydetails = () => {
 
   return (
     <>
-    <Nav />
+      <Nav />
       <div className="propertydetails">
-
-        
         <div>
           <div>
             {image}

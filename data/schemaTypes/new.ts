@@ -53,6 +53,12 @@ export default defineType({
     }),
 
     defineField({
+      name: 'tcount',
+      title: 'Count',
+      type: 'number',
+    }),
+
+    defineField({
       name: 'gallery',
       type: 'array',
       title: 'Gallery',

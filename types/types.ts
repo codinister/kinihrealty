@@ -10,6 +10,7 @@ export type DATATYPE = {
   type: string;
   youtube: string;
   lot: string;
+  tcount: number,
   beds: string;
   baths: string;
   garage: string;

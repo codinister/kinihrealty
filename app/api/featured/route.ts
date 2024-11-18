@@ -24,6 +24,7 @@ export async function GET(req: NextRequest) {
               }
             },
             youtube,
+            tcount,
             "category": category[]->title,
             "gallery": gallery[]{
             "image": asset->url

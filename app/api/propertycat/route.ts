@@ -32,7 +32,8 @@ export async function GET(req: NextRequest) {
             beds,
             baths,
             garage,
-            location
+            location,
+            tcount
             
       }
       `
