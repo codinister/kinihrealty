@@ -6,12 +6,12 @@ import Youtubebox from '@/components/Youtubebox';
 import useGetQuery from '@/data/query/useGetQuery';
 import Googlemap from '@/utils/Googlemap';
 import { useSearchParams } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import BlockContent from '@sanity/block-content-to-react';
 import Noslider from '@/components/Noslider';
 import Slider from '@/components/Slider';
 import Nav from '@/components/Nav';
-import usePatch from '@/utils/usePatch';
+import client from '@/data/client';
 
 
 const Propertydetails = (param: any) => {
@@ -39,11 +39,19 @@ const Propertydetails = (param: any) => {
   const ids = item[0]?.id;
   let count = Number(item[0]?.tcount) + 1;
 
-   console.log(item)
+   console.log(ids)
 
 
+   useEffect(() => {
+    client
+      .patch(ids)
+      .set({
+        tcount: count,
+      })
+      .commit()
+      .then((data) => {  });
+  }, [ids, count]);
 
-  //usePatch({ ids, count })
 
   //BEGIN OTHER LIST
   const other = data.filter(
