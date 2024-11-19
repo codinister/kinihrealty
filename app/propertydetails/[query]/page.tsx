@@ -12,6 +12,7 @@ import Noslider from '@/components/Noslider';
 import Slider from '@/components/Slider';
 import Nav from '@/components/Nav';
 import client from '@/data/client';
+import { groq } from 'next-sanity';
 
 const Propertydetails = (param: any) => {
   const [state, setState] = useState(false);
@@ -37,16 +38,28 @@ const Propertydetails = (param: any) => {
 
   useEffect(() => {
     if (ids) {
-      console.log('Connect', client);
-      client
-        .patch(ids)
-        .set({
-          tcount: count,
-        })
-        .commit()
-        .then((data) => {
-          console.log(data);
-        });
+
+
+    
+      const res = client.fetch(
+        groq`
+        *[_type == 'buy' && title != null]{
+        title
+      }`
+      )
+
+      console.log(res)
+
+      
+      // client
+      //   .patch(ids)
+      //   .set({
+      //     tcount: count,
+      //   })
+      //   .commit()
+      //   .then((data) => {
+      //     console.log(data);
+      //   });
     }
   }, [ids, count]);
 
