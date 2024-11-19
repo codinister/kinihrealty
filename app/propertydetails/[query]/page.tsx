@@ -13,15 +13,11 @@ import Slider from '@/components/Slider';
 import Nav from '@/components/Nav';
 import client from '@/data/client';
 
-
 const Propertydetails = (param: any) => {
-
-  
-
   const [state, setState] = useState(false);
   const data = useGetQuery('propertycat', '/propertycat') || [];
-  
-  const id = param.params.query
+
+  const id = param.params.query;
   const [getImg, setImg] = useState('');
   const item = data.filter((v: any) => v.id === id);
 
@@ -39,19 +35,20 @@ const Propertydetails = (param: any) => {
   const ids = item[0]?.id;
   let count = Number(item[0]?.tcount) + 1;
 
-   useEffect(() => {
-    if(ids.length > 0){
-      console.log(`IDS ${ids.length}`)
-    client
-      .patch(ids)
-      .set({
-        tcount: count,
-      })
-      .commit()
-      .then((data) => { console.log(data) });
+  useEffect(() => {
+    if (ids) {
+      console.log('Connect', client);
+      client
+        .patch(ids)
+        .set({
+          tcount: count,
+        })
+        .commit()
+        .then((data) => {
+          console.log(data);
+        });
     }
   }, [ids, count]);
-
 
   //BEGIN OTHER LIST
   const other = data.filter(
