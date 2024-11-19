@@ -39,10 +39,11 @@ const Propertydetails = (param: any) => {
   const ids = item[0]?.id;
   let count = Number(item[0]?.tcount) + 1;
 
-   console.log(ids)
+   console.log(`ERROR ${ids}`)
 
 
    useEffect(() => {
+    if(ids){
     client
       .patch(ids)
       .set({
@@ -50,6 +51,7 @@ const Propertydetails = (param: any) => {
       })
       .commit()
       .then((data) => {  });
+    }
   }, [ids, count]);
 
 
