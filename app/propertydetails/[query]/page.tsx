@@ -47,10 +47,13 @@ const Propertydetails = (param: any) => {
         title
       }`
       )
+      .then(data => {
+        console.log(data)
+      })
 
-      console.log(res)
 
-      
+
+
       // client
       //   .patch(ids)
       //   .set({
