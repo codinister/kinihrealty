@@ -40,8 +40,8 @@ const Propertydetails = (param: any) => {
   let count = Number(item[0]?.tcount) + 1;
 
    useEffect(() => {
-    if(ids){
-      console.log(`IDS ${ids}`)
+    if(ids.length > 0){
+      console.log(`IDS ${ids.length}`)
     client
       .patch(ids)
       .set({
