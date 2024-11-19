@@ -18,8 +18,8 @@ export async function PATCH(req: NextRequest) {
 
     return NextResponse.json(res);
   } catch (err) {
-    console.log(err);
+    return NextResponse.json(err);
   }
 
-  return NextResponse.json({err: 1});
+ 
 }
