@@ -15,15 +15,12 @@ import usePatch from '@/utils/usePatch';
 
 
 const Propertydetails = () => {
+
   const [state, setState] = useState(false);
-
   const data = useGetQuery('propertycat', '/propertycat') || [];
-
   const query = useSearchParams();
   const id = query ? query.get('query') : '';
-
   const [getImg, setImg] = useState('');
-
   const item = data.filter((v: any) => v.id === id);
 
   //BEGIN ITEM LIST
@@ -39,6 +36,8 @@ const Propertydetails = () => {
   const youtube = item[0]?.youtube;
   const ids = item[0]?.id;
   let count = Number(item[0]?.tcount) + 1;
+
+  console.log(item)
 
 
   usePatch({ ids, count })
