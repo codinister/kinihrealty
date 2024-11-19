@@ -39,12 +39,11 @@ const Propertydetails = (param: any) => {
   const ids = item[0]?.id;
   let count = Number(item[0]?.tcount) + 1;
 
-  // console.log(item)
-
-  // https://www.kinihrealty.com/propertydetails/query=b6579d53-cbdf-42dd-aea9-1b5b979b6870
+   console.log(item)
 
 
-  usePatch({ ids, count })
+
+  //usePatch({ ids, count })
 
   //BEGIN OTHER LIST
   const other = data.filter(
