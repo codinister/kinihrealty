@@ -78,7 +78,7 @@ const SliderCard = ({ singleimage, gallery }: VAL) => {
 
       <Link
         className="prod-details"
-        href={`/propertydetails?query=${singleimage?.id}`}
+        href={`/propertydetails/${singleimage?.id}`}
       >
         <div className="propbox">
           <h4>{tit}</h4>

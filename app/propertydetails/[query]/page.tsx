@@ -14,12 +14,14 @@ import Nav from '@/components/Nav';
 import usePatch from '@/utils/usePatch';
 
 
-const Propertydetails = () => {
+const Propertydetails = (param: any) => {
+
+  
 
   const [state, setState] = useState(false);
   const data = useGetQuery('propertycat', '/propertycat') || [];
-  const query = useSearchParams();
-  const id = query ? query.get('query') : '';
+  
+  const id = param.params.query
   const [getImg, setImg] = useState('');
   const item = data.filter((v: any) => v.id === id);
 
@@ -37,7 +39,9 @@ const Propertydetails = () => {
   const ids = item[0]?.id;
   let count = Number(item[0]?.tcount) + 1;
 
-  console.log(item)
+  // console.log(item)
+
+  // https://www.kinihrealty.com/propertydetails/query=b6579d53-cbdf-42dd-aea9-1b5b979b6870
 
 
   usePatch({ ids, count })
