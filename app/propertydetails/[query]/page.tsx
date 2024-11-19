@@ -42,7 +42,7 @@ const Propertydetails = (param: any) => {
         method: 'patch',
         data: { id: ids, count },
       }).then((data) => {
-        //console.log(data?.data);
+        console.log(data?.data);
       });
     } catch (err) {
       console.log(err);
