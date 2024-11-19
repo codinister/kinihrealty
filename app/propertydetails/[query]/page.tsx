@@ -11,7 +11,7 @@ import BlockContent from '@sanity/block-content-to-react';
 import Noslider from '@/components/Noslider';
 import Slider from '@/components/Slider';
 import Nav from '@/components/Nav';
-import client from '@/data/client';
+import axiosfetch from '@/data/query/fetch';
 
 const Propertydetails = (param: any) => {
   const [state, setState] = useState(false);
@@ -36,21 +36,16 @@ const Propertydetails = (param: any) => {
   let count = Number(item[0]?.tcount) + 1;
 
   useEffect(() => {
-    if (ids) {
-      try {
-        console.log({ids,count})
-        client
-          .patch(ids)
-          .set({
-            tcount: count,
-          })
-          .commit()
-          .then((data) => {
-            console.log(data);
-          });
-      } catch (err) {
-        console.log(err);
-      }
+    try {
+      axiosfetch({
+        url: '/patch',
+        method: 'patch',
+        data: { id: ids, count },
+      }).then((data) => {
+        //console.log(data?.data);
+      });
+    } catch (err) {
+      console.log(err);
     }
   }, [ids, count]);
 
