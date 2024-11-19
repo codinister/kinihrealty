@@ -1,4 +1,4 @@
-import Link from 'next/link';
+
 import Imagemodal2 from './Imagemodal2';
 import { useState } from 'react';
 
@@ -36,7 +36,7 @@ const Noslider = ({ height, width, url }: Noslidertype) => {
           backgroundPosition: 'center',
           height,
           width,
-          cursor: 'pointer'
+          cursor: 'pointer',
         }}
       ></div>
       {showModal ? (

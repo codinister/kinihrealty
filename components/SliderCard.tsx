@@ -12,6 +12,7 @@ type VAL = {
 const SliderCard = ({ singleimage, gallery }: VAL) => {
   const width = '28rem';
   const height = '20rem';
+  
 
   let image: React.ReactNode;
 

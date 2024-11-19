@@ -11,8 +11,8 @@ import BlockContent from '@sanity/block-content-to-react';
 import Noslider from '@/components/Noslider';
 import Slider from '@/components/Slider';
 import Nav from '@/components/Nav';
-import { useEffect } from 'react';
-import client from '@/data/client';
+import usePatch from '@/utils/usePatch';
+
 
 const Propertydetails = () => {
   const [state, setState] = useState(false);
@@ -41,17 +41,7 @@ const Propertydetails = () => {
   let count = Number(item[0]?.tcount) + 1;
 
 
-  useEffect(() => {
-    client
-      .patch(ids)
-      .set({
-        tcount: count 
-      })
-      .commit()
-      .then((data) => {
-        console.log(data);
-      });
-  }, [ids, type, count]);
+  usePatch({ ids, count })
 
   //BEGIN OTHER LIST
   const other = data.filter(

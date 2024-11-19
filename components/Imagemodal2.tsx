@@ -23,9 +23,6 @@ const Imagemodal2 = ({ img, setShowModal }: getimgsType) => {
     document.body.style.overflow = 'scroll';
   };
 
-
-
-
   return windstate ? (
     createPortal(
       <div className="imagemodalwrapper">
