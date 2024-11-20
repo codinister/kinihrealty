@@ -35,6 +35,8 @@ const Propertydetails = (param: any) => {
   const ids = item[0]?.id;
   let count = Number(item[0]?.tcount) + 1;
 
+  console.log('property details page')
+
   useEffect(() => {
     try {
       axiosfetch({
