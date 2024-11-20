@@ -16,9 +16,9 @@ export async function PATCH(req: NextRequest) {
       })
       .commit();
 
-    return NextResponse.json(res);
+    return NextResponse.json({success: 1,res});
   } catch (err) {
-    return NextResponse.json({id,count});
+    return NextResponse.json({err: '1', id,count});
   }
 
  
