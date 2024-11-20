@@ -45,7 +45,7 @@ const Propertydetails = (param: any) => {
         console.log(data?.data);
       });
     } catch (err) {
-      console.log(err);
+      console.log('CLIENT ERROR', err);
     }
   }, [ids, count]);
 
