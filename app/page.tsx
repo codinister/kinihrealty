@@ -18,6 +18,13 @@ export default function Home() {
   const buy = useGetQuery('buy', '/buy') || [];
   const featured = useGetQuery('featured', '/featured') || [];
 
+  if (!sessionStorage.getItem('patchinfo')) {
+    sessionStorage.setItem('patchinfo', JSON.stringify({}));
+  }
+
+
+
+
   return (
     <>
       <Hero />

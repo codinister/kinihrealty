@@ -35,21 +35,32 @@ const Propertydetails = (param: any) => {
   const ids = item[0]?.id;
   let count = Number(item[0]?.tcount) + 1;
 
-  console.log('property details page')
-
   useEffect(() => {
     try {
-      axiosfetch({
-        url: '/patch',
-        method: 'patch',
-        data: { id: ids, count },
-      }).then((data) => {
-        console.log(data?.data);
-      });
+      const obj = sessionStorage.getItem('patchinfo') as any;
+
+      const names = `${type}${ids}`;
+
+      const val = Object.keys(JSON.parse(obj));
+
+      if (!val.includes(names)) {
+        axiosfetch({
+          url: '/patch',
+          method: 'patch',
+          data: { id: ids, count },
+        }).then((data) => {
+          //console.log(data?.data);
+        });
+
+        const bj = JSON.parse(obj)
+        const arr = { ...bj, [names]: 1 };
+
+        sessionStorage.setItem('patchinfo', JSON.stringify(arr));
+      }
     } catch (err) {
       console.log('CLIENT ERROR', err);
     }
-  }, [ids, count]);
+  }, [ids, count, type]);
 
   //BEGIN OTHER LIST
   const other = data.filter(
