@@ -2,7 +2,7 @@ import { defineConfig } from 'sanity';
 import { deskTool } from 'sanity/desk';
 import { schemaTypes } from './schemaTypes/index';
 
-const key = process.env.NEXT_PUBLIC_SANITY_API_KEY || '';
+const key = process.env.NEXT_PUBLIC_PROJECT_ID || '';
 const studioConfig = defineConfig({
   projectId: key,
   dataset: 'production',
