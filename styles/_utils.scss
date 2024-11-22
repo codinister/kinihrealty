@@ -4,6 +4,10 @@
   margin-inline: auto;
 }
 
+
+
+
+
 @media (min-width: 35em) {
   .container {
     margin-inline: 5.6rem;
@@ -198,7 +202,17 @@
   }
 }
 
+
+
+
+
+
+
+
+
 @media (max-width: 35em) {
+
+
   .propertiesforsale {
     background: linear-gradient(to bottom, $light, white);
   }
@@ -221,19 +235,46 @@
       padding: 1.6rem;
       box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
 
-      & > a {
-        box-shadow: 0.6rem 0.6rem 1.2rem rgba(0, 0, 0, 0.5) inset;
+      .sharebtns {
+        strong {
+          font-size: 1.2rem;
+        }
+
+        & > div {
+          & > div {
+            display: flex;
+
+            & > div:nth-of-type(1) {
+              flex-basis: 10rem;
+              flex-grow: 1;
+            }
+            & > div:nth-of-type(2) {
+              flex-basis: 2rem;
+              flex-grow: 1;
+              display: flex;
+              gap: 0.4rem;
+              justify-content: flex-end;
+              align-items: center;
+            }
+          }
+        }
       }
 
-      & > div:nth-of-type(1) {
-        .prop-box {
-          color: #666;
+      & > .prod-details {
+        box-shadow: 0.6rem 0.6rem 1.2rem rgba(0, 0, 0, 0.5) inset;
+        &:hover {
+          h4 {
+            color: #ff7a30 !important;
+          }
+        }
 
+        & > .propbox {
           & > h4 {
             font-size: 2rem;
             padding-block: 1.6rem;
           }
 
+          color: #666;
           & > div:nth-of-type(1) {
             display: flex;
             gap: 1.2rem;

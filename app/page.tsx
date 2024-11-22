@@ -22,9 +22,6 @@ export default function Home() {
     sessionStorage.setItem('patchinfo', JSON.stringify({}));
   }
 
-
-
-
   return (
     <>
       <Hero />
